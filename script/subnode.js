@@ -1,12 +1,11 @@
 
-let customCharStart = "序号";
+let customCharStart = "OK组";
 if ($server.type && $server.type.toLowerCase() === "trojan") {
     return false;
 }
 //区域映射
 const keywordsToNames = {
-    "港|港澳|香港|HK|Hong Kong|HKSAR|澳门|澳門|MO|Macao|Macau|亚洲|CN": { area: "🇭🇰港澳", flag: "🚀" },
-    "台|台湾|台北|高雄|湾湾|TW|Taiwan|Taipei|taipei|Kaohsiung": { area: "台湾", flag: "🚀" },
+    "港|港澳|香港|HK|Hong Kong|HKSAR|澳门|澳門|MO|Macao|Macau|台|台湾|台北|高雄|湾湾|TW|Taiwan|Taipei|taipei|Kaohsiung|中国|CN": { area: "🇭🇰港澳台", flag: "🚀" },
     "新加坡|狮城|SG|Singapore|SIN|LionCity": { area: "🇸🇬新加坡", flag: "🚀" },
     "日|日本|东京|大阪|名古屋|JP|NRT|KIX|Tokyo|Japan|Osaka|Nagoya": { area: "🇯🇵日本", flag: "🚀" },
     "韩国|首尔|釜山|KR|Korea|South Korea|Seoul|Busan|SEL|ICN": { area: "🇰🇷韩国", flag: "🚀" },
@@ -43,14 +42,12 @@ const keywordsToNames = {
     "菲律宾|马尼拉|PH|Philippines|Manila": { area: "🇵🇭菲律宾", flag: "🔥" },
     "南非|约翰内斯堡|开普敦|ZA|South Africa|Johannesburg|Cape Town": { area: "🇿🇦南非", flag: "🔥" },
     "波兰|华沙|克拉科夫|PL|Poland|Warsaw|Krakow": { area: "🇵🇱波兰", flag: "🔥" },
-    "土耳其|伊斯坦布尔|安卡拉|TR|Turkey|Istanbul|Ankara": { area: "🇹🇷土耳其", flag: "💎" },
     "西班牙|马德里|巴塞罗那|ES|Spain|Madrid|Barcelona": { area: "🇪🇸西班牙", flag: "💎" },
     "巴西|圣保罗|里约热内卢|BR|Brazil|São Paulo|Rio de Janeiro": { area: "🇧🇷巴西", flag: "💎" },
     "墨西哥|墨西哥城|瓜达拉哈拉|MX|Mexico|Mexico City|Guadalajara": { area: "🇲🇽墨西哥", flag: "💎" },
     "阿根廷|布宜诺斯艾利斯|AR|Argentina|Buenos Aires": { area: "🇦🇷阿根廷", flag: "💎" },
     "埃及|开罗|EG|Egypt|Cairo": { area: "🇪🇬埃及", flag: "💎" },
     "希腊|雅典|GR|Greece|Athens": { area: "🇬🇷希腊", flag: "💎" },
-    "匈牙利|布达佩斯|HU|Hungary|Budapest": { area: "🇭🇺匈牙利", flag: "💎" },
     "捷克|布拉格|CZ|Czech|Prague": { area: "🇨🇿捷克", flag: "💎" },
     "葡萄牙|里斯本|PT|Portugal|Lisbon": { area: "🇵🇹葡萄牙", flag: "💎" },
     "乌克兰|Ukraine|UA|Kyiv|Lviv|Odesa": { area: "🇺🇦乌克兰", flag: "💎" }
@@ -81,9 +78,9 @@ if (!map["totalNode"]) {
 }
 if (!map[newTitle]) {
     map[newTitle] = 1;
-    newTitle = `${flagIcon}${customCharStart}${++map["totalNode"]}${newTitle}-1`;
+    newTitle = `${newTitle}-1 @${flagIcon}${customCharStart}-${++map["totalNode"]}`;
 } else {
-    newTitle = `${flagIcon}${customCharStart}${++map["totalNode"]}${newTitle}-${++map[newTitle]}`;
+    newTitle = `${newTitle}-${++map[newTitle]} @${flagIcon}${customCharStart}-${++map["totalNode"]}`;
 }
 
 $server.title = newTitle;
