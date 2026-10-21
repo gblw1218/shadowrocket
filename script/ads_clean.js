@@ -28,11 +28,15 @@ if (body) {
             if (obj.data) {
                 delete obj.data.ads;
                 delete obj.data.splash;
+                delete obj.data.advertisings;
+                delete obj.data.ad_list;
+                delete obj.data.loading; // 部分版本的开屏加载项
                 if (Array.isArray(obj.data)) {
-                    obj.data = obj.data.filter(item => !item.is_ad);
+                    obj.data = obj.data.filter(item => !item.is_ad && !item.type?.includes('ad'));
                 }
             }
             if (obj.ads) delete obj.ads;
+            if (obj.splash) delete obj.splash;
         }
 
         // 3. 微信小程序/公众号广告接口处理
