@@ -5,7 +5,8 @@ if ($server.type && $server.type.toLowerCase() === "trojan") {
 }
 //区域映射
 const keywordsToNames = {
-    "港|港澳|香港|HK|Hong Kong|HKSAR|澳门|澳門|MO|Macao|Macau|台|台湾|台北|高雄|湾湾|TW|Taiwan|Taipei|taipei|Kaohsiung|中国|CN": { area: "🇭🇰港澳台", flag: "🚀" },
+    "香港|HK|Hong Kong|HKSAR|澳门|澳門|MO|Macao|Macau|台湾|台北|高雄|湾湾|TW|Taiwan|Taipei|Kaohsiung|港澳|港": { area: "🇭🇰港澳台", flag: "🚀" },
+    "中国大陆|大陆|China|CN": { area: "🇨🇳中国大陆", flag: "💎" },
     "新加坡|狮城|SG|Singapore|SIN|LionCity": { area: "🇸🇬新加坡", flag: "🚀" },
     "日|日本|东京|大阪|名古屋|JP|NRT|KIX|Tokyo|Japan|Osaka|Nagoya": { area: "🇯🇵日本", flag: "🚀" },
     "韩国|首尔|釜山|KR|Korea|South Korea|Seoul|Busan|SEL|ICN": { area: "🇰🇷韩国", flag: "🚀" },
@@ -15,7 +16,7 @@ const keywordsToNames = {
     "荷兰|阿姆斯特丹|鹿特丹|NL|Netherlands|Amsterdam|Rotterdam": { area: "🇳🇱荷兰", flag: "🚀" },
     "卢森堡|Luxembourg|LU|Luxembourg City": { area: "🇱🇺卢森堡", flag: "🚀" },
     "澳大利亚|澳洲|悉尼|墨尔本|布里斯班|AU|Australia|Sydney|Melbourne|Brisbane|欧美": { area: "🇦🇺澳大利亚", flag: "🍀" },
-    "美国|美國|US|USA|洛杉矶|洛杉磯|西雅图|纽约|芝加哥|Atlanta|States|American|Los Angeles|Seattle|New York|Chicago|LAX|SFO|SEA|SJC|LA|NY": { area: "🇺🇸美国", flag: "🍀" },
+    "美国|美國|US|USA|洛杉矶|洛杉磯|西雅图|纽约|芝加哥|Atlanta|States|American|Los Angeles|Seattle|New York|Chicago|LAX|SFO|SEA|SJC|NY": { area: "🇺🇸美国", flag: "🍀" },
     "加拿大|多伦多|温哥华|蒙特利尔|CA|Canada|Toronto|Vancouver|Montreal": { area: "🇨🇦加拿大", flag: "🍀" },
     "法国|巴黎|里昂|马赛|FR|France|Paris|Lyon|Marseille": { area: "🇫🇷法国", flag: "🍀" },
     "瑞士|苏黎世|日内瓦|CH|Switzerland|Zurich|Geneva": { area: "🇨🇭瑞士", flag: "🍀" },
@@ -25,6 +26,7 @@ const keywordsToNames = {
     "爱沙尼亚|Estonia|EE|Tallinn": { area: "🇪🇪爱沙尼亚", flag: "🍀" },
     "泰国|曼谷|清迈|TH|Thailand|Bangkok|Chiang Mai": { area: "🇹🇭泰国", flag: "🍀" },
     "越南|河内|胡志明|VN|Vietnam|Hanoi|Ho Chi Minh": { area: "🇻🇳越南", flag: "🍀" },
+    "老挝|寮国|Laos|Lao|LA|VTE": { area: "🇱🇦老挝", flag: "🍀" },
     "冰岛|雷克雅未克|IS|Iceland|Reykjavik": { area: "🇮🇸冰岛", flag: "🍀" },
     "丹麦|Denmark|DK|Copenhagen|Aarhus|Odense": { area: "🇩🇰丹麦", flag: "🔥" },
     "挪威|奥斯陆|NO|Norway|Oslo": { area: "🇳🇴挪威", flag: "🔥" },
@@ -54,14 +56,24 @@ const keywordsToNames = {
 };
 
 
-let newTitle = $server.title;
+let newTitle = $server.title.replace(/([a-z])([A-Z])/g, '$1 $2');
 let titleFlag = false;
 let flagIcon = '';
 for (const keyword in keywordsToNames) {
-    if (new RegExp(keyword, 'i').test(newTitle)) {
-        newTitle = keywordsToNames[keyword].area;
-        flagIcon = keywordsToNames[keyword].flag;
-        titleFlag = true;
+    const aliases = keyword.split('|');
+    for (const alias of aliases) {
+        const isShortCode = /^[A-Za-z0-9]{2,3}$/.test(alias);
+        const pattern = isShortCode
+            ? `(^|[^A-Za-z0-9])${alias}([^A-Za-z0-9]|$)`
+            : alias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        if (new RegExp(pattern, 'i').test(newTitle)) {
+            newTitle = keywordsToNames[keyword].area;
+            flagIcon = keywordsToNames[keyword].flag;
+            titleFlag = true;
+            break;
+        }
+    }
+    if (titleFlag) {
         break;
     }
 }
