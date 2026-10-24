@@ -1,0 +1,40 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+
+# 1. 独立引用你由代码导出的纯节点 YAML 文件
+proxy-providers:
+  my-auto-nodes:
+    type: http
+    url: "https://your-domain.com/sub_ok_clash.yaml" # 指向你生成的纯节点地址
+    interval: 86400 # 24小时静默拉取
+    path: ./providers/my-auto-nodes.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+# 2. 自定义自动化策略组（URL-Test 容灾）
+proxy-groups:
+  - name: 自动选优
+    type: url-test
+    use:
+      - my-auto-nodes
+    tolerance: 100
+    interval: 600
+    # 正则筛选，过滤无效节点
+    filter: "(?i)香港|日本|新加坡|美国|HK|JP|SG|US"
+
+  - name: 节点选择
+    type: select
+    proxies:
+      - 自动选优
+      - DIRECT
+
+# 3. 完全自控的分流规则
+rules:
+  - GEOIP,CN,DIRECT
+  - MATCH,节点选择
