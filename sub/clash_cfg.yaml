@@ -5,7 +5,6 @@ mode: rule
 log-level: info
 ipv6: false
 
-# 1. 隐私保护：配置安全且高效的 DNS（防止 DNS 泄漏）
 dns:
   enable: true
   listen: 0.0.0.0:53
@@ -13,20 +12,20 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   nameserver:
-    - 223.5.5.5
+    - https://dns.alidns.com/dns-query
     - 119.29.29.29
+    - quic://223.5.5.5
   fallback:
     - https://dns.cloudflare.com/dns-query
-    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
 
-# 2. 引入节点
 proxy-providers:
   my-auto-nodes:
     type: http
-    url: "https://raw.githubusercontent.com/gblw1218/shadowrocket/refs/heads/main/sub/sub_ok_clash.yaml"[cite: 1]
+    url: "https://raw.githubusercontent.com/gblw1218/shadowrocket/refs/heads/main/sub/sub_ok_clash.yaml"
     interval: 86400
     path: ./providers/my-auto-nodes.yaml
     health-check:
@@ -34,51 +33,7 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
 
-# 3. 引入去广告等外部规则文件
 rule-providers:
-  # 去广告规则
-  adblock:
-    type: http
-    behavior: domain
-    url: "port: 7890
-socks-port: 7891
-allow-lan: false
-mode: rule
-log-level: info
-ipv6: false
-
-# 1. 隐私保护：配置安全且高效的 DNS（防止 DNS 泄漏）
-dns:
-  enable: true
-  listen: 0.0.0.0:53
-  ipv6: false
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  fallback:
-    - https://dns.cloudflare.com/dns-query
-    - https://1.1.1.1/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-
-# 2. 引入节点
-proxy-providers:
-  my-auto-nodes:
-    type: http
-    url: "https://raw.githubusercontent.com/gblw1218/shadowrocket/refs/heads/main/sub/sub_ok_clash.yaml"[cite: 1]
-    interval: 86400
-    path: ./providers/my-auto-nodes.yaml
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
-
-# 3. 引入去广告等外部规则文件
-rule-providers:
-  # 去广告规则
   adblock:
     type: http
     behavior: domain
@@ -86,7 +41,6 @@ rule-providers:
     path: ./rules/adblock.yaml
     interval: 86400
 
-# 4. 策略组
 proxy-groups:
   - name: 自动选优
     type: url-test
@@ -94,46 +48,24 @@ proxy-groups:
       - my-auto-nodes
     tolerance: 100
     interval: 600
-    filter: "(?i)香港|日本|新加坡|美国|HK|JP|SG|US"
+    filter: "(?i)香港|日本|新加坡|美国|韩国|英国|台湾|加拿大|澳大利亚|德国|法国|印度|HK|JP|SG|US|KR|UK|TW|CA|AU|DE|FR|IN"
 
-  - name: 节点选择
-    type: select
-    proxies:
-      - 自动选优
-      - DIRECT
-
-# 5. 分流规则（增加去广告拦截）
-rules:
-  # 优先拦截广告和隐私追踪域名
-  - RULE-SET,adblock,REJECT
-  # 国内流量直连
-  - GEOIP,CN,DIRECT
-  # 其余走节点选择
-  - MATCH,节点选择"
-    path: ./rules/adblock.yaml
-    interval: 86400
-
-# 4. 策略组
-proxy-groups:
-  - name: 自动选优
+  - name: Gemini服务
     type: url-test
     use:
       - my-auto-nodes
     tolerance: 100
     interval: 600
-    filter: "(?i)香港|日本|新加坡|美国|HK|JP|SG|US"
+    filter: "(?i)美国|日本|新加坡|韩国|英国|台湾|加拿大|澳大利亚|德国|法国|印度|US|JP|SG|KR|UK|TW|CA|AU|DE|FR|IN"
 
   - name: 节点选择
     type: select
     proxies:
       - 自动选优
+      - Gemini服务
       - DIRECT
 
-# 5. 分流规则（增加去广告拦截）
 rules:
-  # 优先拦截广告和隐私追踪域名
   - RULE-SET,adblock,REJECT
-  # 国内流量直连
   - GEOIP,CN,DIRECT
-  # 其余走节点选择
   - MATCH,节点选择
