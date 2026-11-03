@@ -20,57 +20,60 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-    - client-fingerprint: firefox
-      name: nl荷兰_1
-      port: 25362
-      reality-opts:
-        public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-        short-id: 23732d14a527990d
-      server: 79.182.39.236
-      servername: www.chip.de
+    - cipher: aes-256-gcm
+      name: it意大利_1
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.18
+      type: ss
+    - flow: xtls-rprx-vision
+      name: de德国_1
+      port: 20065
+      server: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
+      servername: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
       tls: true
       type: vless
-      uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
+      uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
+    - cipher: chacha20-ietf-poly1305
+      name: gb英国_1
+      password: 28789988-887e-4e41-83cd-27bbfb7999ad
+      port: 40006
+      server: xunlinknode.csdjhajkshdjkas.com
+      type: ss
     - name: jp日本_1
-      password: b556fef6-c976-4f14-af7e-09260c4867ae
-      port: 48972
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 38025
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
     - name: jp日本_2
-      password: b556fef6-c976-4f14-af7e-09260c4867ae
-      port: 32808
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 47159
+      server: sg02-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: jp日本_3
+      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
+      port: 26213
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
     - name: us美国_1
-      password: b556fef6-c976-4f14-af7e-09260c4867ae
-      port: 34602
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 39734
+      server: us01zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: us美国_2
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 20144
       server: us01zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
     - name: sg新加坡_1
-      password: b556fef6-c976-4f14-af7e-09260c4867ae
-      port: 28947
+      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
+      port: 38557
       server: sg01-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: ZZUnknown_1
-      password: b556fef6-c976-4f14-af7e-09260c4867ae
-      port: 443
-      server: us02zl.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: us美国_2
-      password: b556fef6-c976-4f14-af7e-09260c4867ae
-      port: 32040
-      server: us01zl.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_3
-      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
-      port: 47159
-      server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
     - name: jp日本_4
@@ -79,33 +82,21 @@ proxies:
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: jp日本_5
-      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
-      port: 38025
-      server: sg02-hy.poke-mon.xyz
+    - name: sg新加坡_2
+      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
+      port: 23984
+      server: sg01-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: ZZUnknown_2
-      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+    - name: us美国_3
+      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
       port: 443
       server: us02zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_3
-      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
-      port: 20144
-      server: us01zl.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_6
-      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
-      port: 26213
-      server: sg02-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_7
+    - name: jp日本_5
       password: 9a098f50-be4b-4f6c-b837-52fb7eacb346
-      port: 27581
+      port: 45324
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
@@ -115,39 +106,39 @@ proxies:
       server: us01zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_5
-      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
-      port: 48150
-      server: us01zl.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_8
+    - name: sg新加坡_3
       password: 9a098f50-be4b-4f6c-b837-52fb7eacb346
-      port: 45324
-      server: sg02-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: sg新加坡_2
-      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 23959
+      port: 29053
       server: sg01-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_6
+    - name: us美国_5
       password: 9a098f50-be4b-4f6c-b837-52fb7eacb346
       port: 25394
       server: us01zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: sg新加坡_3
-      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 23873
+    - name: jp日本_6
+      password: 9a098f50-be4b-4f6c-b837-52fb7eacb346
+      port: 27581
+      server: sg02-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: sg新加坡_4
+      password: 9a098f50-be4b-4f6c-b837-52fb7eacb346
+      port: 29309
       server: sg01-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: jp日本_9
+    - name: us美国_6
+      password: 9a098f50-be4b-4f6c-b837-52fb7eacb346
+      port: 443
+      server: us02zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: jp日本_7
       password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 35379
+      port: 28422
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
@@ -157,149 +148,175 @@ proxies:
       server: us01zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
+    - name: sg新加坡_5
+      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
+      port: 23959
+      server: sg01-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: jp日本_8
+      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
+      port: 35379
+      server: sg02-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
     - name: us美国_8
       password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 28865
-      server: us01zl.poke-mon.xyz
+      port: 443
+      server: us02zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_9
-      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 33055
-      server: us01zl.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_10
-      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 28422
-      server: sg02-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_11
+    - name: sg新加坡_6
       password: 1a49b729-c9b9-41ae-a47b-e4f11368bcbe
-      port: 32390
-      server: sg02-hy.poke-mon.xyz
+      port: 30197
+      server: sg01-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: jp日本_12
+    - name: jp日本_9
       password: 1a49b729-c9b9-41ae-a47b-e4f11368bcbe
       port: 49687
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_10
+    - name: jp日本_10
       password: 1a49b729-c9b9-41ae-a47b-e4f11368bcbe
-      port: 34066
-      server: us01zl.poke-mon.xyz
+      port: 32390
+      server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: jp日本_13
+    - name: us美国_9
+      password: 1a49b729-c9b9-41ae-a47b-e4f11368bcbe
+      port: 443
+      server: us02zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: jp日本_11
       password: 151d3766-d5e4-4947-a46c-3f0a7f503c0a
       port: 45501
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: ZZUnknown_3
-      password: 1a49b729-c9b9-41ae-a47b-e4f11368bcbe
-      port: 443
-      server: us02zl.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_14
-      password: 151d3766-d5e4-4947-a46c-3f0a7f503c0a
-      port: 24613
-      server: sg02-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: sg新加坡_4
+    - name: sg新加坡_7
       password: 151d3766-d5e4-4947-a46c-3f0a7f503c0a
       port: 43013
       server: sg01-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: jp日本_15
-      password: 977d69f8-836c-410a-841f-996fcece84b2
-      port: 23084
+    - name: jp日本_12
+      password: 151d3766-d5e4-4947-a46c-3f0a7f503c0a
+      port: 24613
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: ZZUnknown_4
+    - name: us美国_10
       password: 151d3766-d5e4-4947-a46c-3f0a7f503c0a
       port: 443
       server: us02zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: jp日本_16
+    - name: sg新加坡_8
       password: 977d69f8-836c-410a-841f-996fcece84b2
-      port: 35334
-      server: sg02-hy.poke-mon.xyz
+      port: 46935
+      server: sg01-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: sg新加坡_5
+    - name: sg新加坡_9
       password: 977d69f8-836c-410a-841f-996fcece84b2
       port: 43113
       server: sg01-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: ZZUnknown_5
+    - name: jp日本_13
+      password: 977d69f8-836c-410a-841f-996fcece84b2
+      port: 35334
+      server: sg02-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: jp日本_14
+      password: 977d69f8-836c-410a-841f-996fcece84b2
+      port: 23084
+      server: sg02-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: us美国_11
       password: 977d69f8-836c-410a-841f-996fcece84b2
       port: 443
       server: us02zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_11
+    - name: us美国_12
       password: 977d69f8-836c-410a-841f-996fcece84b2
       port: 21343
       server: us01zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: nl荷兰_2
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: 31.77.13.22
-      servername: rusbid.de
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - cipher: aes-256-gcm
-      name: jp日本_17
-      password: BeaUf9c0AEWH40Pu
-      port: 8388
-      server: 154.36.158.197
-      type: ss
     - name: ae阿联酋_1
       password: 69e41e64-a832-471a-b740-94577ca85520
       port: 443
-      server: 217.60.73.56
+      server: forshynewh.duckdns.org
       skip-cert-verify: true
       sni: forshynewh.duckdns.org
       type: hysteria2
-    - cipher: aes-256-gcm
-      name: it意大利_1
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.36
-      type: ss
+    - name: us美国_13
+      password: 977d69f8-836c-410a-841f-996fcece84b2
+      port: 22642
+      server: us01zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
     - cipher: aes-256-gcm
       name: it意大利_2
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
+      server: 202.50.253.27
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_3
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.63
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_4
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.72
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_5
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.18
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_6
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
       server: 202.50.253.54
       type: ss
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: de德国_1
-      port: 443
-      reality-opts:
-        public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-      server: 163.245.42.157
-      servername: mother-earth.fyi
-      tls: true
-      type: vless
-      uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    - cipher: aes-256-gcm
+      name: it意大利_7
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.81
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_8
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.45
+      type: ss
+    - cipher: chacha20-ietf-poly1305
+      name: gb英国_2
+      password: 28789988-887e-4e41-83cd-27bbfb7999ad
+      port: 40006
+      server: xunlinknode.csdjhajkshdjkas.com
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_9
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.99
+      type: ss
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
       name: de德国_2
@@ -317,81 +334,36 @@ proxies:
       port: 443
       reality-opts:
         public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      server: 9.247.23.209
+      servername: mother-earth.fyi
+      tls: true
+      type: vless
+      uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: de德国_4
+      port: 443
+      reality-opts:
+        public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
       server: 163.245.42.132
       servername: mother-earth.fyi
       tls: true
       type: vless
       uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-    - client-fingerprint: safari
-      name: ch瑞士_1
-      network: ws
-      port: 443
-      server: 195.141.65.98
-      servername: 148-253-210-191.sslip.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
-      ws-opts:
-        headers:
-            Host: 148-253-210-191.sslip.io
-        path: /test-ws
-    - client-fingerprint: edge
-      name: ch瑞士_2
-      network: ws
-      port: 443
-      server: 195.141.65.98
-      servername: 148-253-210-191.sslip.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
-      ws-opts:
-        headers:
-            Host: 148-253-210-191.sslip.io
-        path: /test-ws
-    - name: ch瑞士_3
-      network: ws
-      port: 443
-      server: 195.141.65.98
-      servername: 148-253-210-191.sslip.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
-      ws-opts:
-        headers:
-            Host: 148-253-210-191.sslip.io
-        path: /test-ws
-    - client-fingerprint: qq
-      name: ch瑞士_4
-      network: ws
-      port: 443
-      server: 195.141.65.98
-      servername: 148-253-210-191.sslip.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
-      ws-opts:
-        headers:
-            Host: 148-253-210-191.sslip.io
-        path: /test-ws
-    - client-fingerprint: firefox
-      name: ch瑞士_5
-      network: ws
-      port: 443
-      server: 195.141.65.98
-      servername: 148-253-210-191.sslip.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
-      ws-opts:
-        headers:
-            Host: 148-253-210-191.sslip.io
-        path: /test-ws
     - client-fingerprint: chrome
+      name: usUS_14
+      network: ws
+      port: 443
+      server: sgtht.wawojk.dpdns.org
+      servername: sgtht.wawojk.dpdns.org
+      tls: true
+      type: vless
+      uuid: 953150e0-cd65-408e-9d71-01b1fee8a172
+      ws-opts:
+        headers:
+            Host: sgtht.wawojk.dpdns.org
+        path: /adaa734f-f8c4-4778-8584-ab92e18d5c25-vm
+    - client-fingerprint: firefox
       name: hk香港_1
       port: 31884
       server: 152.175.6.229
@@ -400,18 +372,19 @@ proxies:
       tls: true
       type: vless
       uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-    - client-fingerprint: firefox
-      name: hk香港_2
-      port: 31884
-      server: 152.175.6.229
-      servername: hk010.zestapp778.com
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: nl荷兰_1
+      port: 444
+      server: 177.177.215.45
+      servername: ams2.shtil.io
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+      uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
     - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: nl荷兰_3
+      flow: xtls-rprx-vision-udp443
+      name: nl荷兰_2
       port: 444
       server: 177.177.215.45
       servername: ams2.shtil.io
@@ -421,43 +394,7 @@ proxies:
       uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
     - client-fingerprint: firefox
       flow: xtls-rprx-vision
-      name: nl荷兰_4
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: cz-prg.dontblockmepls.com
-      servername: rusbid.de
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - client-fingerprint: firefox
-      name: nl荷兰_5
-      port: 25362
-      reality-opts:
-        public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-        short-id: 23732d14a527990d
-      server: 79.182.39.236
-      servername: www.chip.de
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
-    - client-fingerprint: firefox
-      name: nl荷兰_6
-      port: 25895
-      reality-opts:
-        public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-        short-id: a73f0410d728c823
-      server: 79.182.39.232
-      servername: www.samsung.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: nl荷兰_7
+      name: nl荷兰_3
       port: 444
       server: ams2.shtil.io
       servername: ams2.shtil.io
@@ -465,798 +402,160 @@ proxies:
       tls: true
       type: vless
       uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: nl荷兰_8
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: 31.77.13.22
-      servername: rusbid.de
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: nl荷兰_9
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: cz-prg.dontblockmepls.com
-      servername: rusbid.de
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - client-fingerprint: firefox
-      name: nl荷兰_10
-      port: 25895
-      reality-opts:
-        public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-        short-id: a73f0410d728c823
-      server: 79.182.39.237
-      servername: www.samsung.com
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: us美国_12
+    - flow: xtls-rprx-vision
+      name: de德国_5
       port: 443
       reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 72.56.52.248
-      servername: lv.dexlen.cc
-      skip-cert-verify: true
+        public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      server: 9.247.23.209
+      servername: mother-earth.fyi
       tls: true
       type: vless
-      uuid: 2614a96d-e39f-4cca-a9c7-467a178c2c0a
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: us美国_13
+      uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    - name: us美国_15
+      password: 91e8215c-cc6a-4494-b52b-efd87836ef50
       port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 13.143.180.142
-      servername: sw.lenvex.cc
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: us美国_14
-      port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 13.143.180.142
-      servername: sw.lenvex.cc
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
-    - client-fingerprint: firefox
-      name: us美国_15
-      network: ws
-      port: 443
-      server: 188.255.157.136
-      servername: xy1ej.stream-node-us.danfeng.qzz.io
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 26524cce-d514-4014-a426-365fb266a14d
-      ws-opts:
-        headers:
-            Host: xy1ej.stream-node-us.danfeng.qzz.io
-        path: /danfeng?ed=2560
-    - client-fingerprint: firefox
-      name: us美国_16
-      network: ws
-      port: 8443
-      server: 179.255.132.69
-      servername: t5pmr.mail-node.gfw.kdns.fr
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 26524cce-d514-4014-a426-365fb266a14d
-      ws-opts:
-        headers:
-            Host: t5pmr.mail-node.gfw.kdns.fr
-        path: /danfeng?ed=2560
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: us美国_17
-      port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 13.143.182.103
-      servername: ee.lenvex.cc
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-4cca-a9c7-467a178c2c0a
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: us美国_18
-      port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 13.143.182.103
-      servername: ee.lenvex.cc
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-4cca-a9c7-467a178c2c0a
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: us美国_19
-      port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 13.143.180.142
-      servername: sw.lenvex.cc
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
-    - name: us美国_20
-      network: ws
-      port: 443
-      server: wwww.qarvian.ir
-      servername: cdn.akamai.steamstatic.com
-      tls: true
-      type: vless
-      uuid: 3d9d91c0-0a90-471a-a518-a0ff66a1970a
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
-    - name: us美国_21
-      network: ws
-      port: 443
-      server: 199.232.78.160
-      servername: community.fastly.steamstatic.com
-      tls: true
-      type: vless
-      uuid: 3d9d91c0-0a90-471a-a518-a0ff66a1970a
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-    - client-fingerprint: firefox
-      name: us美国_22
-      network: ws
-      port: 443
-      server: 199.232.239.239
-      servername: community.fastly.steamstatic.com
-      tls: true
-      type: vless
-      uuid: cc60f593-7762-42cb-c2a1-96d60b53988d
-      ws-opts:
-        headers:
-            Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
-        path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056
-    - name: ae阿联酋_2
-      password: 69e41e64-a832-471a-b740-94577ca85520
-      port: 443
-      server: 217.60.73.56
-      skip-cert-verify: true
-      sni: forshynewh.duckdns.org
+      server: 31.76.0.142
+      sni: media.embrofree.org
       type: hysteria2
-    - name: ae阿联酋_3
-      password: 69e41e64-a832-471a-b740-94577ca85520
-      port: 443
-      server: forshynewh.duckdns.org
-      sni: forshynewh.duckdns.org
-      type: hysteria2
-    - name: us美国_23
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: 13.143.189.147
-      sni: pl2.nexfile.net
-      type: hysteria2
-    - name: us美国_24
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: 13.143.189.144
-      sni: pl2.nexfile.net
-      type: hysteria2
-    - name: us美国_25
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: 13.143.189.149
-      sni: pl2.nexfile.net
-      type: hysteria2
-    - name: us美国_26
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: 179.253.82.33
-      sni: fl3.nexfile.net
-      type: hysteria2
-    - name: us美国_27
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: fl3.nexfile.net
-      sni: fl3.nexfile.net
-      type: hysteria2
-    - name: de德国_4
+    - name: de德国_6
       password: M2NbFywBXjS9Ova8SgqRrQkp
       port: 443
       server: 178.17.58.55
       sni: de-tg.fastlanehosting.ru
       type: hysteria2
-    - name: de德国_5
+    - name: us美国_16
+      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+      port: 4444
+      server: 179.253.82.33
+      sni: fl3.nexfile.net
+      type: hysteria2
+    - name: us美国_17
+      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+      port: 4444
+      server: 13.143.189.144
+      sni: pl2.nexfile.net
+      type: hysteria2
+    - name: us美国_18
+      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+      port: 4444
+      server: 13.143.189.149
+      sni: pl2.nexfile.net
+      type: hysteria2
+    - name: us美国_19
+      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+      port: 4444
+      server: 13.143.189.147
+      sni: pl2.nexfile.net
+      type: hysteria2
+    - name: us美国_20
+      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+      port: 4444
+      server: pl2.nexfile.net
+      sni: pl2.nexfile.net
+      type: hysteria2
+    - name: us美国_21
+      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+      port: 4444
+      server: 179.253.82.47
+      sni: fl3.nexfile.net
+      type: hysteria2
+    - name: us美国_22
+      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+      port: 4444
+      server: fl3.nexfile.net
+      sni: fl3.nexfile.net
+      type: hysteria2
+    - name: de德国_7
       password: M2NbFywBXjS9Ova8SgqRrQkp
       port: 443
       server: de-tg.fastlanehosting.ru
-      type: hysteria2
-    - name: jp日本_18
-      password: sharecentrepro
-      port: 4433
-      server: 210.231.184.93
       type: hysteria2
     - name: au澳大利亚_1
       password: sharecentrepro
       port: 4433
       server: twgcp.sharecentre.online
       type: hysteria2
-    - name: ZZUnknown_7
+    - name: ZZUnknown_18
       password: sharecentrepro
       port: 4433
       server: us.scproxy.top
       type: hysteria2
-    - client-fingerprint: ios
-      name: usUS_556
-      network: ws
-      port: 2087
-      server: 104.18.1.1
-      servername: 1.proxy2.us.ci.
-      tls: true
-      type: vless
-      uuid: 4859c235-2530-4062-9a0b-ea859cbbf861
-      ws-opts:
-        headers:
-            Host: 1.proxy2.us.ci.
-        path: /
+    - name: jp日本_15
+      password: sharecentrepro
+      port: 4433
+      server: 210.231.184.93
+      type: hysteria2
     - client-fingerprint: chrome
-      name: fr法国_8
+      name: ee爱沙尼亚_1
       network: xhttp
-      port: 37783
-      reality-opts:
-        public-key: tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg
-        short-id: 21569dd6
-      server: 62.210.70.194
-      servername: www.yahoo.com
+      port: 34451
+      server: ee-2e06d85dc0.shamanapp.online
+      servername: ee-2e06d85dc0.shamanapp.online
       tls: true
       type: vless
-      uuid: a289c660-1b12-432b-a06c-c2ae469272b0
+      uuid: 5d9fb46f-c4bc-4d6e-9a26-a4d5f51abd28
       xhttp-opts:
-        path: /OCrp5Ajs
-    - name: usUS_557
-      network: ws
-      password: gHQP0D7D15
-      port: 2053
-      server: 104.25.239.113
-      sni: marvdasht.phonecomparisonblog.org
-      type: trojan
-      ws-opts:
-        path: /
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: de德国_8
-      port: 59397
-      reality-opts:
-        public-key: 7w6m1Z7wZk1KX7bBlCi50t_8T-HdC8aMizOcIyqcaS4
-        short-id: "1430"
-      server: 185.44.64.166
-      servername: la.blogs.nvidia.com
-      tls: true
-      type: vless
-      uuid: ac36b6f8-d03d-46cb-808f-e655183fb76d
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: nl荷兰_12
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: cz-prg.dontblockmepls.com
-      servername: rusbid.de
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - client-fingerprint: chrome
-      name: nl荷兰_13
-      port: 25362
-      reality-opts:
-        public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-        short-id: 23732d14a527990d
-      server: 79.182.39.75
-      servername: www.chip.de
-      tls: true
-      type: vless
-      uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: nl荷兰_14
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: 31.77.13.22
-      servername: rusbid.de
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: nl荷兰_15
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: 31.77.13.22
-      servername: rusbid.de
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - client-fingerprint: firefox
-      name: nl荷兰_16
-      port: 25895
-      reality-opts:
-        public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-        short-id: a73f0410d728c823
-      server: 79.182.39.237
-      servername: www.samsung.com
-      tls: true
-      type: vless
-      uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: nl荷兰_17
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: cz-prg.dontblockmepls.com
-      servername: rusbid.de
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - client-fingerprint: chrome
-      name: usUS_559
-      network: ws
-      port: 443
-      server: tn1r.eu.cc
-      servername: tn1r.eu.cc
-      tls: true
-      type: vless
-      uuid: 22424ee2-6fe3-42ca-9749-6d4c5a8acc82
-      ws-opts:
         headers:
-            Host: tn1r.eu.cc
-        path: /id-pusat
-    - client-fingerprint: chrome
-      name: il以色列_1
-      port: 25362
-      reality-opts:
-        public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-        short-id: 23732d14a527990d
-      server: de15.h1cloud.net
-      servername: www.chip.de
-      tls: true
-      type: vless
-      uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: nl荷兰_18
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: cz-prg.dontblockmepls.com
-      servername: rusbid.de
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - name: us美国_560
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: pl2.nexfile.net
-      sni: pl2.nexfile.net
-      type: hysteria2
-    - name: us美国_561
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: fl3.nexfile.net
-      sni: fl3.nexfile.net
-      type: hysteria2
-    - client-fingerprint: unsafe
-      name: usUS_562
-      network: ws
-      port: 443
-      server: 104.24.46.107
-      servername: ccc.010304.xyz
-      tls: true
-      type: vless
-      uuid: d342d11e-d224-4463-b982-532309285094
-      ws-opts:
-        headers:
-            Host: ccc.010304.xyz
-        path: /fp
-    - client-fingerprint: unsafe
-      name: usUS_563
-      network: ws
-      port: 443
-      server: 172.66.140.66
-      servername: ccc.010304.xyz
-      tls: true
-      type: vless
-      uuid: d342d11e-d224-4463-b982-532309285094
-      ws-opts:
-        headers:
-            Host: ccc.010304.xyz
-        path: /fp
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: sg新加坡_9
-      port: 8443
-      reality-opts:
-        public-key: 1H1DiBCBB7fpALV71pH1q66ePybBFlVOcxftdlQimQ8
-        short-id: 385cb18df0892069
-      server: 92.243.74.224
-      servername: de8.vpngold.ru
-      tls: true
-      type: vless
-      uuid: a52fd54b-ba4d-4d11-8e00-301e2646cd66
-    - name: ae阿联酋_4
-      password: 69e41e64-a832-471a-b740-94577ca85520
-      port: 443
-      server: 217.60.73.56
-      skip-cert-verify: true
-      sni: forshynewh.duckdns.org
-      type: hysteria2
-    - client-fingerprint: chrome
-      name: it意大利_3
-      network: ws
-      port: 443
-      server: 151.91.39.191
-      servername: 148-253-210-191.sslip.io
-      tls: true
-      type: vless
-      uuid: 53f03acd-fec1-6685-fc8f-03baf9550cb8
-      ws-opts:
-        headers:
-            Host: 148-253-210-191.sslip.io
-        path: /test-ws
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: us美国_564
-      port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 13.143.180.141
-      servername: sw.lenvex.cc
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: us美国_565
-      port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 13.143.180.142
-      servername: sw.lenvex.cc
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: us美国_566
-      port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 72.56.52.248
-      servername: lv.dexlen.cc
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-4cca-a9c7-467a178c2c0a
-    - client-fingerprint: chrome
-      name: usUS_567
-      network: ws
-      port: 8443
-      server: x9f2.guiming.net
-      servername: x9f2.guiming.net
-      tls: true
-      type: vless
-      uuid: cbf3b4be-b3a8-4f70-bd28-988e72f7d46d
-      ws-opts:
-        headers:
-            Host: x9f2.guiming.net
-        path: /d8f3k2m9
-    - client-fingerprint: chrome
-      name: us美国_568
-      network: ws
-      port: 443
-      server: 199.232.239.239
-      servername: firefox.com
-      tls: true
-      type: vless
-      uuid: cc60f593-7762-42cb-c2a1-96d60b53988d
-      ws-opts:
-        headers:
-            Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
-        path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056/?TELEGRAM--BYA--CHANEL---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN---@JKVPN--@JKVPN---@JKVPN---@JKVPN---@JKVPN
-    - name: de德国_9
-      port: 47456
-      server: loos.cksurge.ir
-      type: vless
-      uuid: 76cdb797-1c32-4e14-820b-c36f08f3f2cc
-    - client-fingerprint: chrome
-      name: us美国_569
-      network: ws
-      port: 443
-      server: 199.232.239.239
-      servername: community.fastly.steamstatic.com
-      tls: true
-      type: vless
-      uuid: cc60f593-7762-42cb-c2a1-96d60b53988d
-      ws-opts:
-        headers:
-            Host: mpkoe7ypcibr80p102020123.global.ssl.fastly.net
-        path: /@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel/@CloudVPNchannel?ed=2056
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: nl荷兰_19
-      port: 444
-      server: 177.177.215.45
-      servername: ams2.shtil.io
-      tls: true
-      type: vless
-      uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: nl荷兰_20
-      port: 444
-      server: ams2.shtil.io
-      servername: ams2.shtil.io
-      tls: true
-      type: vless
-      uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: nl荷兰_21
-      port: 443
-      reality-opts:
-        public-key: isYQuhKDrgc7IQ7G0LHywFnt57wffrkZ-er18DkVsBA
-        short-id: e6d589857d1cec5e
-      server: 154.86.119.158
-      servername: fr.golangwikito.cfd
-      tls: true
-      type: vless
-      uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
-    - client-fingerprint: firefox
-      name: de德国_10
-      network: ws
-      port: 2083
-      server: 195.137.226.133
-      servername: nexostore.xnetaro.ir
-      tls: true
-      type: vless
-      uuid: 7f733b1a-6c00-48ac-ae3b-cbc178a9146e
-      ws-opts:
-        headers:
-            Host: nexostore.xnetaro.ir
-        path: /wss?TELEGRAM----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN----@GHOFLSHCAN
-    - name: de德国_12
-      password: fac593ac-d6aa-4523-bea9-b3eb2a2b3da3
-      port: 13209
-      server: f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com
-      skip-cert-verify: true
-      sni: f533f9b2-c69a-4dd0-bc63-f2ab94dd5f53.f1eb10ae-1d82-4c6a-b4dd-bd9525520956.com
-      type: trojan
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: nl荷兰_22
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: 31.77.13.22
-      servername: rusbid.de
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - cipher: chacha20-ietf-poly1305
-      name: gb英国_2
-      password: 28789988-887e-4e41-83cd-27bbfb7999ad
-      port: 40006
-      server: xunlinknode.csdjhajkshdjkas.com
-      type: ss
-    - client-fingerprint: chrome
-      name: us美国_571
-      network: ws
-      port: 443
-      server: 199.232.78.160
-      servername: ssl.fastly.com
-      tls: true
-      type: vless
-      uuid: XpnTeam-76
-      ws-opts:
-        headers:
-            Host: Appxdn.global.ssl.fastly.net
-        path: /
-    - cipher: aes-256-gcm
-      name: it意大利_4
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.54
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_5
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.99
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_6
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.81
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_7
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.54
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_8
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.63
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_9
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.36
-      type: ss
+            Host: ee-2e06d85dc0.shamanapp.online
+        path: /ShamanXHTTP2026
     - cipher: aes-256-gcm
       name: it意大利_10
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.18
+      server: 202.50.253.99
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_11
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.72
+      server: 202.50.253.63
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_12
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.90
+      server: 202.50.253.45
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_13
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.45
+      server: 202.50.253.27
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_14
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.36
+      server: 202.50.253.81
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_15
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.99
+      server: 202.50.253.18
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_16
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.81
+      server: 202.50.253.90
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_17
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.63
+      server: 202.50.253.36
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_18
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.90
+      server: 202.50.253.54
       type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_19
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.18
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_20
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.27
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_21
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.45
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_22
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.72
-      type: ss
-    - client-fingerprint: chrome
-      name: il以色列_4
-      port: 25362
-      reality-opts:
-        public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-        short-id: 23732d14a527990d
-      server: de15.h1cloud.net
-      servername: www.chip.de
-      tls: true
-      type: vless
-      uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: nl荷兰_30
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: cz-prg.dontblockmepls.com
-      servername: rusbid.de
-      tls: true
-      type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - client-fingerprint: chrome
-      name: hk香港_18
-      port: 31884
-      server: 152.175.6.229
-      servername: hk010.zestapp778.com
-      tls: true
-      type: vless
-      uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-    - client-fingerprint: chrome
-      name: il以色列_5
-      port: 25362
-      reality-opts:
-        public-key: hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA
-        short-id: 23732d14a527990d
-      server: de15.h1cloud.net
-      servername: www.chip.de
-      tls: true
-      type: vless
-      uuid: 36fb6650-8a50-42b5-9f66-06538806f32c
-    - alterId: 0
-      cipher: auto
-      name: ❓Other_15|117KB/s|M003-260806 [0ae34bf3287d]
-      port: 21019
-      server: dog-hk.kunlun01dns.com
-      type: vmess
-      uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-    - name: ZZUnknown_21
-      port: 80
-      server: sdct.sernett.ir
-      type: vless
-      uuid: SERVERNETT-SERVERNETT1
-    - name: se瑞典_4
-      network: httpupgrade
-      port: 8880
-      server: 185.146.173.39
-      type: vless
-      uuid: Parsashonam-304
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
-      name: de德国_44
+      name: de德国_22
       port: 443
       reality-opts:
         public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -1267,7 +566,7 @@ proxies:
       uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
-      name: de德国_45
+      name: de德国_23
       port: 443
       reality-opts:
         public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -1277,154 +576,211 @@ proxies:
       type: vless
       uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
     - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: nl荷兰_31
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: 31.77.13.22
-      servername: rusbid.de
+      name: hk香港_3
+      port: 31884
+      server: 152.175.6.229
+      servername: hk010.zestapp778.com
       tls: true
       type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - name: ae阿联酋_5
+      uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+    - client-fingerprint: ios
+      flow: xtls-rprx-vision
+      name: de德国_24
+      port: 20065
+      server: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
+      servername: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
+      tls: true
+      type: vless
+      uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: de德国_25
+      port: 20065
+      server: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
+      servername: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
+      tls: true
+      type: vless
+      uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
+    - client-fingerprint: edge
+      flow: xtls-rprx-vision
+      name: de德国_26
+      port: 20065
+      server: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
+      servername: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
+      tls: true
+      type: vless
+      uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
+    - name: ZZUnknown_21
+      port: 80
+      server: sdct.sernett.ir
+      type: vless
+      uuid: SERVERNETT-SERVERNETT1
+    - name: se瑞典_5
+      network: httpupgrade
+      port: 8880
+      server: 185.146.173.39
+      type: vless
+      uuid: Parsashonam-304
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: de德国_28
+      port: 443
+      reality-opts:
+        public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      server: edge.bookmai.com
+      servername: mother-earth.fyi
+      tls: true
+      type: vless
+      uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: de德国_29
+      port: 443
+      reality-opts:
+        public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      server: 9.247.23.209
+      servername: mother-earth.fyi
+      tls: true
+      type: vless
+      uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    - name: ae阿联酋_2
       password: 69e41e64-a832-471a-b740-94577ca85520
       port: 443
       server: 217.60.73.56
       sni: forshynewh.duckdns.org
       type: hysteria2
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: nl荷兰_32
-      port: 2063
-      reality-opts:
-        public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-      server: cz-prg.dontblockmepls.com
-      servername: rusbid.de
+    - flow: xtls-rprx-vision
+      name: us美国_89
+      port: 10002
+      server: 1.ppap.a1.zjs.ppt.998.kfc-520.com
       tls: true
       type: vless
-      uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-    - name: us美国_825
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: 179.253.82.33
-      sni: fl3.nexfile.net
-      type: hysteria2
-    - client-fingerprint: firefox
+      uuid: 8cb0c4fb-03ee-35b8-a47b-cd1d7e76dfd3
+    - client-fingerprint: chrome
       flow: xtls-rprx-vision
-      name: nl荷兰_33
+      name: de德国_30
+      port: 443
+      reality-opts:
+        public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      server: 163.245.42.157
+      servername: mother-earth.fyi
+      tls: true
+      type: vless
+      uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: de德国_31
+      port: 443
+      reality-opts:
+        public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      server: 163.245.42.132
+      servername: mother-earth.fyi
+      tls: true
+      type: vless
+      uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
+    - name: ae阿联酋_3
+      password: 69e41e64-a832-471a-b740-94577ca85520
+      port: 443
+      server: forshynewh.duckdns.org
+      sni: forshynewh.duckdns.org
+      type: hysteria2
+    - name: ae阿联酋_4
+      password: 69e41e64-a832-471a-b740-94577ca85520
+      port: 443
+      server: 217.60.73.56
+      skip-cert-verify: true
+      sni: forshynewh.duckdns.org
+      type: hysteria2
+    - name: ae阿联酋_5
+      password: 69e41e64-a832-471a-b740-94577ca85520
+      port: 443
+      server: forshynewh.duckdns.org
+      skip-cert-verify: true
+      sni: forshynewh.duckdns.org
+      type: hysteria2
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: de德国_32
+      port: 20065
+      server: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
+      servername: 875f9760-be1a-4dfe-8c2b-3f080b5ab158.node1.runet.network
+      tls: true
+      type: vless
+      uuid: 2446e2e2-1ce3-4502-9050-1dd32bacc68c
+    - client-fingerprint: chrome
+      flow: xtls-rprx-vision
+      name: nl荷兰_9
       port: 444
-      server: ams2.shtil.io
+      server: 177.177.215.45
       servername: ams2.shtil.io
       tls: true
       type: vless
       uuid: 254f28cb-d0c1-41e9-a06b-f2155213ff04
-    - alterId: 0
-      cipher: auto
-      name: _US_美国
-      network: ws
-      port: 443
-      server: guanwang.awsno.com
-      servername: guanwang.awsno.com
-      tls: true
-      type: vmess
-      uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-      ws-opts:
-        headers:
-            Host: guanwang.awsno.com
-        path: /hls/cctv5phd.m3u8
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: us美国_827
-      port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 13.143.180.141
-      servername: sw.lenvex.cc
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: us美国_828
-      port: 443
-      reality-opts:
-        public-key: OFmJtVi6OB9E6KIc5QV5YmoouimRFc-Se9hICjtV8hQ
-      server: 13.143.180.142
-      servername: sw.lenvex.cc
-      tls: true
-      type: vless
-      uuid: 2614a96d-e39f-02f0-a9c7-467a178c2c0a
 proxy-groups:
     - filter: (?i)香港|日本|新加坡|美国|韩国|英国|台湾|加拿大|澳大利亚|德国|法国|印度|HK|JP|SG|US|KR|UK|TW|CA|AU|DE|FR|IN
       interval: 600
       name: 自动选优
       proxies:
-        - nl荷兰_1
+        - it意大利_1
+        - de德国_1
+        - gb英国_1
         - jp日本_1
         - jp日本_2
-        - us美国_1
-        - sg新加坡_1
-        - ZZUnknown_1
-        - us美国_2
         - jp日本_3
+        - us美国_1
+        - us美国_2
+        - sg新加坡_1
         - jp日本_4
-        - jp日本_5
-        - ZZUnknown_2
-        - us美国_3
-        - jp日本_6
-        - jp日本_7
-        - us美国_4
-        - us美国_5
-        - jp日本_8
         - sg新加坡_2
-        - us美国_6
+        - us美国_3
+        - jp日本_5
+        - us美国_4
         - sg新加坡_3
-        - jp日本_9
+        - us美国_5
+        - jp日本_6
+        - sg新加坡_4
+        - us美国_6
+        - jp日本_7
         - us美国_7
+        - sg新加坡_5
+        - jp日本_8
         - us美国_8
-        - us美国_9
+        - sg新加坡_6
+        - jp日本_9
         - jp日本_10
+        - us美国_9
         - jp日本_11
+        - sg新加坡_7
         - jp日本_12
         - us美国_10
+        - sg新加坡_8
+        - sg新加坡_9
         - jp日本_13
-        - ZZUnknown_3
         - jp日本_14
-        - sg新加坡_4
-        - jp日本_15
-        - ZZUnknown_4
-        - jp日本_16
-        - sg新加坡_5
-        - ZZUnknown_5
         - us美国_11
-        - nl荷兰_2
-        - jp日本_17
+        - us美国_12
         - ae阿联酋_1
-        - it意大利_1
+        - us美国_13
         - it意大利_2
-        - de德国_1
+        - it意大利_3
+        - it意大利_4
+        - it意大利_5
+        - it意大利_6
+        - it意大利_7
+        - it意大利_8
+        - gb英国_2
+        - it意大利_9
         - de德国_2
         - de德国_3
-        - ch瑞士_1
-        - ch瑞士_2
-        - ch瑞士_3
-        - ch瑞士_4
-        - ch瑞士_5
+        - de德国_4
+        - usUS_14
         - hk香港_1
-        - hk香港_2
+        - nl荷兰_1
+        - nl荷兰_2
         - nl荷兰_3
-        - nl荷兰_4
-        - nl荷兰_5
-        - nl荷兰_6
-        - nl荷兰_7
-        - nl荷兰_8
-        - nl荷兰_9
-        - nl荷兰_10
-        - us美国_12
-        - us美国_13
-        - us美国_14
+        - de德国_5
         - us美国_15
+        - de德国_6
         - us美国_16
         - us美国_17
         - us美国_18
@@ -1432,59 +788,11 @@ proxy-groups:
         - us美国_20
         - us美国_21
         - us美国_22
-        - ae阿联酋_2
-        - ae阿联酋_3
-        - us美国_23
-        - us美国_24
-        - us美国_25
-        - us美国_26
-        - us美国_27
-        - de德国_4
-        - de德国_5
-        - jp日本_18
+        - de德国_7
         - au澳大利亚_1
-        - ZZUnknown_7
-        - usUS_556
-        - fr法国_8
-        - usUS_557
-        - de德国_8
-        - nl荷兰_12
-        - nl荷兰_13
-        - nl荷兰_14
-        - nl荷兰_15
-        - nl荷兰_16
-        - nl荷兰_17
-        - usUS_559
-        - il以色列_1
-        - nl荷兰_18
-        - us美国_560
-        - us美国_561
-        - usUS_562
-        - usUS_563
-        - sg新加坡_9
-        - ae阿联酋_4
-        - it意大利_3
-        - us美国_564
-        - us美国_565
-        - us美国_566
-        - usUS_567
-        - us美国_568
-        - de德国_9
-        - us美国_569
-        - nl荷兰_19
-        - nl荷兰_20
-        - nl荷兰_21
-        - de德国_10
-        - de德国_12
-        - nl荷兰_22
-        - gb英国_2
-        - us美国_571
-        - it意大利_4
-        - it意大利_5
-        - it意大利_6
-        - it意大利_7
-        - it意大利_8
-        - it意大利_9
+        - ZZUnknown_18
+        - jp日本_15
+        - ee爱沙尼亚_1
         - it意大利_10
         - it意大利_11
         - it意大利_12
@@ -1494,27 +802,25 @@ proxy-groups:
         - it意大利_16
         - it意大利_17
         - it意大利_18
-        - it意大利_19
-        - it意大利_20
-        - it意大利_21
-        - it意大利_22
-        - il以色列_4
-        - nl荷兰_30
-        - hk香港_18
-        - il以色列_5
-        - ❓Other_15|117KB/s|M003-260806 [0ae34bf3287d]
+        - de德国_22
+        - de德国_23
+        - hk香港_3
+        - de德国_24
+        - de德国_25
+        - de德国_26
         - ZZUnknown_21
-        - se瑞典_4
-        - de德国_44
-        - de德国_45
-        - nl荷兰_31
+        - se瑞典_5
+        - de德国_28
+        - de德国_29
+        - ae阿联酋_2
+        - us美国_89
+        - de德国_30
+        - de德国_31
+        - ae阿联酋_3
+        - ae阿联酋_4
         - ae阿联酋_5
-        - nl荷兰_32
-        - us美国_825
-        - nl荷兰_33
-        - _US_美国
-        - us美国_827
-        - us美国_828
+        - de德国_32
+        - nl荷兰_9
       tolerance: 100
       type: url-test
       url: http://www.gstatic.com/generate_204
@@ -1522,71 +828,66 @@ proxy-groups:
       interval: 600
       name: Gemini服务
       proxies:
-        - nl荷兰_1
+        - it意大利_1
+        - de德国_1
+        - gb英国_1
         - jp日本_1
         - jp日本_2
-        - us美国_1
-        - sg新加坡_1
-        - ZZUnknown_1
-        - us美国_2
         - jp日本_3
+        - us美国_1
+        - us美国_2
+        - sg新加坡_1
         - jp日本_4
-        - jp日本_5
-        - ZZUnknown_2
-        - us美国_3
-        - jp日本_6
-        - jp日本_7
-        - us美国_4
-        - us美国_5
-        - jp日本_8
         - sg新加坡_2
-        - us美国_6
+        - us美国_3
+        - jp日本_5
+        - us美国_4
         - sg新加坡_3
-        - jp日本_9
+        - us美国_5
+        - jp日本_6
+        - sg新加坡_4
+        - us美国_6
+        - jp日本_7
         - us美国_7
+        - sg新加坡_5
+        - jp日本_8
         - us美国_8
-        - us美国_9
+        - sg新加坡_6
+        - jp日本_9
         - jp日本_10
+        - us美国_9
         - jp日本_11
+        - sg新加坡_7
         - jp日本_12
         - us美国_10
+        - sg新加坡_8
+        - sg新加坡_9
         - jp日本_13
-        - ZZUnknown_3
         - jp日本_14
-        - sg新加坡_4
-        - jp日本_15
-        - ZZUnknown_4
-        - jp日本_16
-        - sg新加坡_5
-        - ZZUnknown_5
         - us美国_11
-        - nl荷兰_2
-        - jp日本_17
+        - us美国_12
         - ae阿联酋_1
-        - it意大利_1
+        - us美国_13
         - it意大利_2
-        - de德国_1
+        - it意大利_3
+        - it意大利_4
+        - it意大利_5
+        - it意大利_6
+        - it意大利_7
+        - it意大利_8
+        - gb英国_2
+        - it意大利_9
         - de德国_2
         - de德国_3
-        - ch瑞士_1
-        - ch瑞士_2
-        - ch瑞士_3
-        - ch瑞士_4
-        - ch瑞士_5
+        - de德国_4
+        - usUS_14
         - hk香港_1
-        - hk香港_2
+        - nl荷兰_1
+        - nl荷兰_2
         - nl荷兰_3
-        - nl荷兰_4
-        - nl荷兰_5
-        - nl荷兰_6
-        - nl荷兰_7
-        - nl荷兰_8
-        - nl荷兰_9
-        - nl荷兰_10
-        - us美国_12
-        - us美国_13
-        - us美国_14
+        - de德国_5
         - us美国_15
+        - de德国_6
         - us美国_16
         - us美国_17
         - us美国_18
@@ -1594,59 +895,11 @@ proxy-groups:
         - us美国_20
         - us美国_21
         - us美国_22
-        - ae阿联酋_2
-        - ae阿联酋_3
-        - us美国_23
-        - us美国_24
-        - us美国_25
-        - us美国_26
-        - us美国_27
-        - de德国_4
-        - de德国_5
-        - jp日本_18
+        - de德国_7
         - au澳大利亚_1
-        - ZZUnknown_7
-        - usUS_556
-        - fr法国_8
-        - usUS_557
-        - de德国_8
-        - nl荷兰_12
-        - nl荷兰_13
-        - nl荷兰_14
-        - nl荷兰_15
-        - nl荷兰_16
-        - nl荷兰_17
-        - usUS_559
-        - il以色列_1
-        - nl荷兰_18
-        - us美国_560
-        - us美国_561
-        - usUS_562
-        - usUS_563
-        - sg新加坡_9
-        - ae阿联酋_4
-        - it意大利_3
-        - us美国_564
-        - us美国_565
-        - us美国_566
-        - usUS_567
-        - us美国_568
-        - de德国_9
-        - us美国_569
-        - nl荷兰_19
-        - nl荷兰_20
-        - nl荷兰_21
-        - de德国_10
-        - de德国_12
-        - nl荷兰_22
-        - gb英国_2
-        - us美国_571
-        - it意大利_4
-        - it意大利_5
-        - it意大利_6
-        - it意大利_7
-        - it意大利_8
-        - it意大利_9
+        - ZZUnknown_18
+        - jp日本_15
+        - ee爱沙尼亚_1
         - it意大利_10
         - it意大利_11
         - it意大利_12
@@ -1656,27 +909,25 @@ proxy-groups:
         - it意大利_16
         - it意大利_17
         - it意大利_18
-        - it意大利_19
-        - it意大利_20
-        - it意大利_21
-        - it意大利_22
-        - il以色列_4
-        - nl荷兰_30
-        - hk香港_18
-        - il以色列_5
-        - ❓Other_15|117KB/s|M003-260806 [0ae34bf3287d]
+        - de德国_22
+        - de德国_23
+        - hk香港_3
+        - de德国_24
+        - de德国_25
+        - de德国_26
         - ZZUnknown_21
-        - se瑞典_4
-        - de德国_44
-        - de德国_45
-        - nl荷兰_31
+        - se瑞典_5
+        - de德国_28
+        - de德国_29
+        - ae阿联酋_2
+        - us美国_89
+        - de德国_30
+        - de德国_31
+        - ae阿联酋_3
+        - ae阿联酋_4
         - ae阿联酋_5
-        - nl荷兰_32
-        - us美国_825
-        - nl荷兰_33
-        - _US_美国
-        - us美国_827
-        - us美国_828
+        - de德国_32
+        - nl荷兰_9
       tolerance: 100
       type: url-test
       url: http://www.gstatic.com/generate_204
@@ -1684,71 +935,66 @@ proxy-groups:
       proxies:
         - 自动选优
         - Gemini服务
-        - nl荷兰_1
+        - it意大利_1
+        - de德国_1
+        - gb英国_1
         - jp日本_1
         - jp日本_2
-        - us美国_1
-        - sg新加坡_1
-        - ZZUnknown_1
-        - us美国_2
         - jp日本_3
+        - us美国_1
+        - us美国_2
+        - sg新加坡_1
         - jp日本_4
-        - jp日本_5
-        - ZZUnknown_2
-        - us美国_3
-        - jp日本_6
-        - jp日本_7
-        - us美国_4
-        - us美国_5
-        - jp日本_8
         - sg新加坡_2
-        - us美国_6
+        - us美国_3
+        - jp日本_5
+        - us美国_4
         - sg新加坡_3
-        - jp日本_9
+        - us美国_5
+        - jp日本_6
+        - sg新加坡_4
+        - us美国_6
+        - jp日本_7
         - us美国_7
+        - sg新加坡_5
+        - jp日本_8
         - us美国_8
-        - us美国_9
+        - sg新加坡_6
+        - jp日本_9
         - jp日本_10
+        - us美国_9
         - jp日本_11
+        - sg新加坡_7
         - jp日本_12
         - us美国_10
+        - sg新加坡_8
+        - sg新加坡_9
         - jp日本_13
-        - ZZUnknown_3
         - jp日本_14
-        - sg新加坡_4
-        - jp日本_15
-        - ZZUnknown_4
-        - jp日本_16
-        - sg新加坡_5
-        - ZZUnknown_5
         - us美国_11
-        - nl荷兰_2
-        - jp日本_17
+        - us美国_12
         - ae阿联酋_1
-        - it意大利_1
+        - us美国_13
         - it意大利_2
-        - de德国_1
+        - it意大利_3
+        - it意大利_4
+        - it意大利_5
+        - it意大利_6
+        - it意大利_7
+        - it意大利_8
+        - gb英国_2
+        - it意大利_9
         - de德国_2
         - de德国_3
-        - ch瑞士_1
-        - ch瑞士_2
-        - ch瑞士_3
-        - ch瑞士_4
-        - ch瑞士_5
+        - de德国_4
+        - usUS_14
         - hk香港_1
-        - hk香港_2
+        - nl荷兰_1
+        - nl荷兰_2
         - nl荷兰_3
-        - nl荷兰_4
-        - nl荷兰_5
-        - nl荷兰_6
-        - nl荷兰_7
-        - nl荷兰_8
-        - nl荷兰_9
-        - nl荷兰_10
-        - us美国_12
-        - us美国_13
-        - us美国_14
+        - de德国_5
         - us美国_15
+        - de德国_6
         - us美国_16
         - us美国_17
         - us美国_18
@@ -1756,59 +1002,11 @@ proxy-groups:
         - us美国_20
         - us美国_21
         - us美国_22
-        - ae阿联酋_2
-        - ae阿联酋_3
-        - us美国_23
-        - us美国_24
-        - us美国_25
-        - us美国_26
-        - us美国_27
-        - de德国_4
-        - de德国_5
-        - jp日本_18
+        - de德国_7
         - au澳大利亚_1
-        - ZZUnknown_7
-        - usUS_556
-        - fr法国_8
-        - usUS_557
-        - de德国_8
-        - nl荷兰_12
-        - nl荷兰_13
-        - nl荷兰_14
-        - nl荷兰_15
-        - nl荷兰_16
-        - nl荷兰_17
-        - usUS_559
-        - il以色列_1
-        - nl荷兰_18
-        - us美国_560
-        - us美国_561
-        - usUS_562
-        - usUS_563
-        - sg新加坡_9
-        - ae阿联酋_4
-        - it意大利_3
-        - us美国_564
-        - us美国_565
-        - us美国_566
-        - usUS_567
-        - us美国_568
-        - de德国_9
-        - us美国_569
-        - nl荷兰_19
-        - nl荷兰_20
-        - nl荷兰_21
-        - de德国_10
-        - de德国_12
-        - nl荷兰_22
-        - gb英国_2
-        - us美国_571
-        - it意大利_4
-        - it意大利_5
-        - it意大利_6
-        - it意大利_7
-        - it意大利_8
-        - it意大利_9
+        - ZZUnknown_18
+        - jp日本_15
+        - ee爱沙尼亚_1
         - it意大利_10
         - it意大利_11
         - it意大利_12
@@ -1818,27 +1016,25 @@ proxy-groups:
         - it意大利_16
         - it意大利_17
         - it意大利_18
-        - it意大利_19
-        - it意大利_20
-        - it意大利_21
-        - it意大利_22
-        - il以色列_4
-        - nl荷兰_30
-        - hk香港_18
-        - il以色列_5
-        - ❓Other_15|117KB/s|M003-260806 [0ae34bf3287d]
+        - de德国_22
+        - de德国_23
+        - hk香港_3
+        - de德国_24
+        - de德国_25
+        - de德国_26
         - ZZUnknown_21
-        - se瑞典_4
-        - de德国_44
-        - de德国_45
-        - nl荷兰_31
+        - se瑞典_5
+        - de德国_28
+        - de德国_29
+        - ae阿联酋_2
+        - us美国_89
+        - de德国_30
+        - de德国_31
+        - ae阿联酋_3
+        - ae阿联酋_4
         - ae阿联酋_5
-        - nl荷兰_32
-        - us美国_825
-        - nl荷兰_33
-        - _US_美国
-        - us美国_827
-        - us美国_828
+        - de德国_32
+        - nl荷兰_9
         - DIRECT
       type: select
 rule-providers:
