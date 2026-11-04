@@ -20,11 +20,65 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
+    - client-fingerprint: chrome
+      name: us美国_1
+      network: ws
+      port: 443
+      reality-opts:
+        public-key: LWfC_chpo4uDtzJ9VVnuTcf6zTzWKx-LCJAE2Ltl7h4
+        short-id: 5818adc3
+      server: 172.233.129.172
+      servername: itunes.apple.com
+      tls: true
+      type: vless
+      uuid: 40a4b915-5e6f-4316-9bb1-e899f30608e3
+      ws-opts:
+        headers:
+            Host: itunes.apple.com
+        path: /ws
+    - client-fingerprint: chrome
+      name: us美国_2
+      network: ws
+      port: 443
+      reality-opts:
+        public-key: rzeXNEmuocvPVMnmettRsJbHQGjQGaZoH7jNw_3GUD8
+        short-id: 4bf84b30
+      server: 172.235.51.71
+      servername: itunes.apple.com
+      tls: true
+      type: vless
+      uuid: 3c17ead6-201a-4fba-8246-6327b911a1be
+      ws-opts:
+        headers:
+            Host: itunes.apple.com
+        path: /ws
+    - client-fingerprint: chrome
+      name: us美国_3
+      network: ws
+      port: 443
+      reality-opts:
+        public-key: 0RcPjVCZ7X7qXylKu6eGttBaRCh1YmAqpXL6IRXu6Cc
+        short-id: 7e759265
+      server: 172.235.36.156
+      servername: itunes.apple.com
+      tls: true
+      type: vless
+      uuid: 5b01153c-1cde-4efb-ae09-d97dbc4da44b
+      ws-opts:
+        headers:
+            Host: itunes.apple.com
+        path: /ws
+    - cipher: aes-256-gcm
+      name: ru俄罗斯联邦_1
+      password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+      port: 18443
+      server: 46.17.46.27
+      type: ss
     - cipher: aes-256-gcm
       name: it意大利_1
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.63
+      server: 202.50.253.54
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_2
@@ -36,50 +90,86 @@ proxies:
       name: it意大利_3
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.90
+      server: 202.50.253.99
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_4
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.54
+      server: 202.50.253.18
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_5
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.36
+      server: 202.50.253.63
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_6
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.18
+      server: 202.50.253.45
+      type: ss
+    - cipher: aes-256-gcm
+      name: ru俄罗斯联邦_2
+      password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+      port: 18443
+      server: 46.17.46.27
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_7
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.99
+      server: 202.50.253.81
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_8
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.45
+      server: 202.50.253.90
       type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_9
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.81
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_10
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.72
-      type: ss
+    - client-fingerprint: firefox
+      flow: xtls-rprx-vision
+      name: ru俄罗斯联邦_3
+      port: 443
+      reality-opts:
+        public-key: xTePrM5IyjR8o52B2mRAO2nNivfyMpBZxya93MQk4Qc
+        short-id: 2a40b6d6495debf3
+      server: 147.45.161.4
+      servername: defs-68.topp-con.xyz
+      tls: true
+      type: vless
+      uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+    - name: jp日本_1
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 47159
+      server: sg02-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: us美国_4
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 39734
+      server: us01zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: us美国_5
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 20144
+      server: us01zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: jp日本_2
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 38025
+      server: sg02-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: us美国_6
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 443
+      server: us02zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
     - name: sg新加坡_1
       password: cfce2fd0-e7d2-487a-b071-568e0194bf23
       port: 48250
@@ -87,57 +177,39 @@ proxies:
       skip-cert-verify: true
       type: hysteria2
     - name: sg新加坡_2
-      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
-      port: 40182
-      server: sg01-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_1
-      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
-      port: 47159
-      server: sg02-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: us美国_1
-      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
-      port: 20144
-      server: us01zl.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: us美国_2
-      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
-      port: 39734
-      server: us01zl.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_2
-      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
-      port: 37335
-      server: sg02-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: sg新加坡_3
-      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
-      port: 38557
-      server: sg01-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: jp日本_3
-      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
-      port: 38025
-      server: sg02-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: sg新加坡_4
       password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
       port: 23984
       server: sg01-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_3
+    - name: us美国_7
+      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
+      port: 47694
+      server: us01zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: sg新加坡_3
+      password: cfce2fd0-e7d2-487a-b071-568e0194bf23
+      port: 40182
+      server: sg01-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: us美国_8
+      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
+      port: 443
+      server: us02zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: us美国_9
       password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
       port: 48150
       server: us01zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: jp日本_3
+      password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
+      port: 37335
+      server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
     - name: jp日本_4
@@ -146,125 +218,114 @@ proxies:
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_4
+    - name: sg新加坡_4
       password: 58e5b20f-5c7d-45ed-bb45-35fcd2577eb8
-      port: 47694
-      server: us01zl.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: sg新加坡_5
-      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 23959
-      server: sg01-hy.poke-mon.xyz
-      skip-cert-verify: true
-      type: hysteria2
-    - name: sg新加坡_6
-      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 23873
+      port: 38557
       server: sg01-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
     - name: jp日本_5
       password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 28422
+      port: 35379
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
     - name: jp日本_6
       password: 03c3c43e-9781-4246-80e7-7f1a19782a96
-      port: 35379
+      port: 28422
       server: sg02-hy.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_5
+    - name: us美国_10
+      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
+      port: 443
+      server: us02zl.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: sg新加坡_5
+      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
+      port: 23873
+      server: sg01-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
+    - name: us美国_11
       password: 03c3c43e-9781-4246-80e7-7f1a19782a96
       port: 33055
       server: us01zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
-    - name: us美国_6
+    - name: us美国_12
       password: 03c3c43e-9781-4246-80e7-7f1a19782a96
       port: 28865
       server: us01zl.poke-mon.xyz
       skip-cert-verify: true
       type: hysteria2
+    - name: sg新加坡_6
+      password: 03c3c43e-9781-4246-80e7-7f1a19782a96
+      port: 23959
+      server: sg01-hy.poke-mon.xyz
+      skip-cert-verify: true
+      type: hysteria2
     - cipher: aes-256-gcm
-      name: hk香港_1
-      password: I0pPH99n18r05VWm
-      port: 8388
-      server: 45.144.174.183
-      type: ss
-    - cipher: aes-256-gcm
-      name: nl荷兰_1
-      password: KaWGRCxQHzabqoRr
-      port: 8388
-      server: 150.251.158.32
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_11
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.90
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_12
+      name: it意大利_9
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
       server: 202.50.253.72
       type: ss
     - cipher: aes-256-gcm
-      name: it意大利_13
+      name: it意大利_10
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.27
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_11
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.99
+      type: ss
+    - name: us美国_13
+      password: 1d491f8c-ccaa-43e1-b62d-f255c7832e27
+      port: 51000
+      server: 129.146.124.201
+      skip-cert-verify: true
+      sni: cn.cremedelamer.com
+      type: hysteria2
+    - cipher: aes-256-gcm
+      name: it意大利_12
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
       server: 202.50.253.54
       type: ss
-    - name: us美国_7
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: 13.143.189.147
-      sni: pl2.nexfile.net
-      type: hysteria2
-    - name: usUS_8
-      network: ws
-      port: 443
-      server: 172.67.155.148
-      servername: ccc.010304.xyz
-      tls: true
-      type: vless
-      uuid: d342d11e-d224-4463-b982-532309285094
-      ws-opts:
-        headers:
-            Host: ccc.010304.xyz
-        path: /fpfp=chrome
     - cipher: aes-256-gcm
-      name: it意大利_14
+      name: it意大利_13
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.18
+      server: 202.50.253.45
       type: ss
     - cipher: aes-256-gcm
-      name: it意大利_15
+      name: it意大利_14
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
       server: 202.50.253.36
       type: ss
     - cipher: aes-256-gcm
+      name: it意大利_15
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.81
+      type: ss
+    - cipher: aes-256-gcm
       name: it意大利_16
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.99
-      type: ss
-    - cipher: aes-256-gcm
-      name: jp日本_7
-      password: BeaUf9c0AEWH40Pu
-      port: 8388
-      server: 154.36.158.197
+      server: 202.50.253.18
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_17
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.45
+      server: 202.50.253.90
       type: ss
     - cipher: aes-256-gcm
       name: it意大利_18
@@ -278,7 +339,7 @@ proxies:
       port: 443
       reality-opts:
         public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-      server: edge.bookmai.com
+      server: 9.247.23.209
       servername: mother-earth.fyi
       tls: true
       type: vless
@@ -289,63 +350,80 @@ proxies:
       port: 443
       reality-opts:
         public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-      server: 9.247.23.209
+      server: edge.bookmai.com
       servername: mother-earth.fyi
       tls: true
       type: vless
       uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-    - alterId: 0
-      cipher: auto
-      name: ' 美国 18'
-      network: ws
+    - name: tw台湾_1
+      password: 0324fbc29561
       port: 443
-      server: 172.67.190.164
-      servername: guanwang.awsno.com
+      server: 684616s4.df6h451rh.xin
+      servername: px.ads.linkedin.com
+      skip-cert-verify: true
       tls: true
-      type: vmess
-      uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-      ws-opts:
-        headers:
-            Host: guanwang.awsno.com
-        path: /hls/cctv5phd.m3u8
-    - client-fingerprint: firefox
-      name: us美国_10
+      type: anytls
+    - name: tw台湾_2
+      password: 0324fbc29561
+      port: 443
+      server: er8u54dh.df6h451rh.xin
+      servername: px.ads.linkedin.com
+      skip-cert-verify: true
+      tls: true
+      type: anytls
+    - client-fingerprint: chrome
+      name: us美国_14
       network: ws
       port: 443
-      server: 216.167.120.37
-      servername: t5pmr.mail-node.gfw.kdns.fr
+      server: 199.232.78.160
+      servername: community.fastly.steamstatic.com
       skip-cert-verify: true
       tls: true
       type: vless
-      uuid: 26524cce-d514-4014-a426-365fb266a14d
+      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
       ws-opts:
         headers:
-            Host: t5pmr.mail-node.gfw.kdns.fr
-        path: /danfeng?ed=2560
+            Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
+        path: /
+    - client-fingerprint: chrome
+      name: us美国_15
+      network: ws
+      port: 443
+      server: wwww.qarvian.ir
+      servername: cdn.akamai.steamstatic.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
+      ws-opts:
+        headers:
+            Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
+        path: /
+    - client-fingerprint: chrome
+      name: us美国_16
+      network: ws
+      port: 443
+      server: 146.75.57.238
+      servername: cdn.akamai.steamstatic.com
+      skip-cert-verify: true
+      tls: true
+      type: vless
+      uuid: 31edfa90-bc81-4534-9066-322dbf52dcef
+      ws-opts:
+        headers:
+            Host: azadi-gk-nasim.global.ssl.fastly.net
+        path: /
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
       name: de德国_3
-      port: 59397
+      port: 443
       reality-opts:
-        public-key: 7w6m1Z7wZk1KX7bBlCi50t_8T-HdC8aMizOcIyqcaS4
-        short-id: "1430"
-      server: 185.44.64.166
-      servername: la.blogs.nvidia.com
+        public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      server: edge.bookmai.com
+      servername: mother-earth.fyi
       tls: true
       type: vless
-      uuid: ac36b6f8-d03d-46cb-808f-e655183fb76d
-    - cipher: aes-256-gcm
-      name: it意大利_19
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.27
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_20
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.81
-      type: ss
+      uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
       name: de德国_4
@@ -357,129 +435,68 @@ proxies:
       tls: true
       type: vless
       uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-    - name: us美国_11
-      network: ws
+    - client-fingerprint: firefox
+      grpc-opts:
+        grpc-service-name: BookCatalog
+      name: nl荷兰_1
+      network: grpc
       port: 443
-      server: wwww.qarvian.ir
-      servername: cdn.akamai.steamstatic.com
+      reality-opts:
+        public-key: nUUSNvkc5Xy6LRCP4yeFvbI8wFMx7gdgruPMNBq7jzo
+        short-id: dceb4214
+      server: book.jarbook.net
+      servername: reg.jarbook.net
       tls: true
       type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
-    - name: usUS_12
-      network: ws
+      uuid: 95d0e214-eab0-4701-93ed-fea4f1b56062
+    - client-fingerprint: chrome
+      grpc-opts:
+        grpc-service-name: BookCatalog
+      name: nl荷兰_2
+      network: grpc
       port: 443
-      server: 104.17.98.5
-      servername: newcf.jisucf.cloudns.ch
+      reality-opts:
+        public-key: nUUSNvkc5Xy6LRCP4yeFvbI8wFMx7gdgruPMNBq7jzo
+        short-id: dceb4214
+      server: book.jarbook.net
+      servername: reg.jarbook.net
       tls: true
       type: vless
-      uuid: 49ccad64-c854-4f33-b334-793cf0d02b74
-      ws-opts:
-        headers:
-            Host: newcf.jisucf.cloudns.ch
-        path: /
-    - name: us美国_13
-      network: ws
+      uuid: 95d0e214-eab0-4701-93ed-fea4f1b56062
+    - name: pl波兰_1
       port: 443
-      server: 146.75.59.186
-      servername: community.fastly.steamstatic.com
+      reality-opts:
+        public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
+        short-id: 2f49bccf11150ef2
+      server: tg.riotvpn.eu
+      servername: ads.x5.ru
       tls: true
       type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
-    - name: us美国_14
-      network: ws
+      uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a
+    - client-fingerprint: firefox
+      flow: xtls-rprx-vision
+      name: se瑞典_1
       port: 443
-      server: 146.75.57.111
-      servername: cdn.akamai.steamstatic.com
+      reality-opts:
+        public-key: vzRgIP8Mvd9V6krwKxw5EwwzvC4uiaW3wo0Y2ri2_Wc
+      server: 88.216.223.100
+      servername: smart.bachidze.com
       tls: true
       type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
-    - name: us美国_15
-      network: ws
+      uuid: 3bb97d46-789b-4229-88f6-9beb222a4137
+    - name: se瑞典_2
+      password: 769f34f0-1500-488f-b414-03bc90666502
       port: 443
-      server: 199.232.78.160
-      servername: community.fastly.steamstatic.com
-      tls: true
-      type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-    - name: us美国_16
-      network: ws
-      port: 443
-      server: 146.75.59.186
-      servername: community.fastly.steamstatic.com
-      tls: true
-      type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
-    - name: ir伊朗_1
-      port: 8443
-      server: 31.14.116.80
-      type: vless
-      uuid: 93579113-3df4-4206-8124-a75d381a3e32
-    - name: us美国_17
-      network: ws
-      port: 443
-      server: 146.75.59.186
-      servername: community.fastly.steamstatic.com
-      tls: true
-      type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-    - name: us美国_18
-      network: ws
-      port: 443
-      server: 199.232.78.160
-      servername: community.fastly.steamstatic.com
-      tls: true
-      type: vless
-      uuid: 58d2fb1c-7ae2-42c8-8c0d-a393603ebc9f
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-    - name: us美国_19
-      network: ws
-      port: 443
-      server: wwww.qarvian.ir
-      servername: cdn.akamai.steamstatic.com
-      tls: true
-      type: vless
-      uuid: 58d2fb1c-7ae2-42c8-8c0d-a393603ebc9f
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
-    - name: us美国_20
-      network: ws
-      port: 443
-      server: wwww.qarvian.ir
-      servername: cdn.akamai.steamstatic.com
-      tls: true
-      type: vless
-      uuid: 58d2fb1c-7ae2-42c8-8c0d-a393603ebc9f
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
+      server: se.mimowhat.online
+      sni: se.mimowhat.online
+      type: hysteria2
     - name: de德国_5
       password: M2NbFywBXjS9Ova8SgqRrQkp
       port: 443
       server: 178.17.58.55
       sni: de-tg.fastlanehosting.ru
       type: hysteria2
-    - name: de德国_7
+    - name: de德国_6
       password: M2NbFywBXjS9Ova8SgqRrQkp
       port: 443
       server: de-tg.fastlanehosting.ru
@@ -492,100 +509,46 @@ proxies:
       server: 165.154.193.165
       skip-cert-verify: true
       type: hysteria2
-    - name: au澳大利亚_1
-      password: sharecentrepro
-      port: 4433
-      server: twgcp.sharecentre.online
-      type: hysteria2
-    - name: ZZUnknown_9
-      password: sharecentrepro
-      port: 4433
-      server: us.scproxy.top
-      type: hysteria2
-    - name: jp日本_8
-      password: sharecentrepro
-      port: 4433
-      server: 210.231.184.93
-      type: hysteria2
-    - client-fingerprint: chrome
-      name: fr法国_8
-      network: xhttp
-      port: 37783
-      reality-opts:
-        public-key: tQeEamJmYVUUfjRLX7ETvMnPj4DrHzRhR5TI684oYgg
-        short-id: 21569dd6
-      server: 62.210.70.194
-      servername: www.yahoo.com
-      tls: true
-      type: vless
-      uuid: a289c660-1b12-432b-a06c-c2ae469272b0
-      xhttp-opts:
-        path: /OCrp5Ajs
-    - client-fingerprint: ios
-      name: usUS_536
+    - alterId: 0
+      cipher: auto
+      name: ' AetrisVPN'
       network: ws
-      port: 2087
-      server: 104.18.1.1
-      servername: 1.proxy2.us.ci.
-      tls: true
-      type: vless
-      uuid: 4859c235-2530-4062-9a0b-ea859cbbf861
+      port: 10086
+      server: 39.108.113.127
+      type: vmess
+      uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+    - alterId: 0
+      cipher: auto
+      name: US_431|215KB/s|S004-260618
+      network: ws
+      port: 80
+      server: cf.0sm.com
+      type: vmess
+      uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
       ws-opts:
         headers:
-            Host: 1.proxy2.us.ci.
-        path: /
+            Host: vmess.lbw666.dpdns.org
+        path: /ws?ed=2048
     - client-fingerprint: chrome
-      name: usUS_537
-      network: ws
-      port: 2087
-      server: fu.baiproxy.us.ci
-      servername: fu.baiproxy.us.ci
-      tls: true
-      type: vless
-      uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
-      ws-opts:
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_538
-      network: ws
-      port: 2087
-      server: 104.21.1.150
-      servername: fu.baiproxy.us.ci
-      tls: true
-      type: vless
-      uuid: 55d9ec38-1b8a-454b-981a-6acfe8f56d8c
-      ws-opts:
-        headers:
-            Host: fu.baiproxy.us.ci
-        path: /?ed=2560
-    - client-fingerprint: chrome
-      name: usUS_539
-      network: ws
+      flow: xtls-rprx-vision
+      name: de德国_7
       port: 443
-      server: 789156.xyz
-      servername: 789156.xyz
+      reality-opts:
+        public-key: cBTZdCBwrYTTarw6B_lu2TN1M6_Lku68FfWCQT9svhc
+        short-id: cb620aa2f04bce33
+      server: 193.23.218.107
+      servername: yandex.ru
       tls: true
       type: vless
-      uuid: 5f11c240-89df-494c-9c81-8b619023bb58
-      ws-opts:
-        headers:
-            Host: 789156.xyz
-        path: /?ed=2048fp=chrome
-    - client-fingerprint: chrome
-      name: usUS_540
-      network: ws
-      port: 2096
-      server: 104.26.13.12
-      servername: frosty-clover-b8ea-df1f0206.pages.dev
-      tls: true
-      type: vless
-      uuid: a6ba51de-d50a-407f-a8bb-5dc8b3073ec1
-      ws-opts:
-        headers:
-            Host: frosty-clover-b8ea-df1f0206.pages.dev
-        path: /7f0776a02fac
+      uuid: 6f433cf6-4221-48b2-ad29-01121952ef8a
+    - name: us美国_18
+      password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+      port: 443
+      server: 167.88.61.20
+      sni: api.browseseniorrolesandenhanceyourcareertoday.com
+      type: trojan
     - client-fingerprint: firefox
-      name: us美国_541
+      name: us美国_19
       network: xhttp
       port: 443
       server: 31.76.7.233
@@ -595,133 +558,61 @@ proxies:
       uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
       xhttp-opts:
         path: /conv4/stream/d34366ecdd31367d0fc76955c6b8d77c
-    - client-fingerprint: chrome
-      name: us美国_542
-      network: ws
+    - name: us美国_20
+      password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
       port: 443
-      server: 146.75.57.238
-      servername: cdn.akamai.steamstatic.com
-      tls: true
-      type: vless
-      uuid: 31edfa90-bc81-4534-9066-322dbf52dcef
-      ws-opts:
-        headers:
-            Host: azadi-gk-nasim.global.ssl.fastly.net
-        path: /
-    - name: us美国_543
-      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
-      port: 4444
-      server: 13.143.189.147
-      sni: pl2.nexfile.net
+      server: 216.106.186.82
+      sni: courses.findlocaljobnetworkandbuildcommunityconnections.com
+      type: trojan
+    - name: se瑞典_3
+      password: 769f34f0-1500-488f-b414-03bc90666502
+      port: 443
+      server: se.mimowhat.online
+      sni: se.mimowhat.online
       type: hysteria2
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: se瑞典_5
+    - client-fingerprint: firefox
+      grpc-opts:
+        grpc-service-name: grpc-67
+      name: nl荷兰_3
+      network: grpc
       port: 443
       reality-opts:
-        public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
-        short-id: 2d6d073dc88f22a8
-      server: 89.125.37.1
-      servername: se.frgcdn.xyz
+        public-key: 4qE0kXmxDvNzsns2jdwd74AN35RptcTD4eKo5REa9w8
+        short-id: "04"
+      server: 87.232.88.27
+      servername: max.ru
       tls: true
       type: vless
-      uuid: 518079db-d88d-4035-bbf4-ddd1f9cf1e5f
+      uuid: e08d9bc5-6832-4dd4-bd44-d9bbe61e5817
     - client-fingerprint: chrome
-      name: us美国_544
-      network: ws
+      name: fi芬兰_1
+      network: xhttp
       port: 443
-      server: 199.232.78.160
-      servername: community.fastly.steamstatic.com
+      server: 78.17.39.129
+      servername: 78.17.39.129
       tls: true
       type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-        path: /?TELEGRAM-----TOOTFFARANGI
-    - client-fingerprint: chrome
-      name: us美国_545
-      network: ws
+      uuid: c04522c4-3d53-4eab-b5b5-25385d5f11b1
+      xhttp-opts:
+        path: /assets/finvip02/
+    - name: sg新加坡_8
+      password: d9064589-74af-432a-9390-5d8a9da281bf
+      port: 20086
+      server: Sclass-C1.catcat321.com
+      skip-cert-verify: true
+      sni: hk.catxstar.com
+      type: trojan
+    - name: tw台湾_3
+      password: 0324fbc29561
       port: 443
-      server: 146.75.59.186
-      servername: community.fastly.steamstatic.com
+      server: sdf65h46wr.df6h451rh.xin
+      servername: images.ctfassets.net
+      skip-cert-verify: true
       tls: true
-      type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
-        path: /?TELEGRAM-----TOOTFFARANGI
-    - client-fingerprint: chrome
-      name: us美国_546
-      network: ws
-      port: 443
-      server: wwww.qarvian.ir
-      servername: cdn.akamai.steamstatic.com
-      tls: true
-      type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
-        path: /?TELEGRAM-----TOOTFFARANGI
-    - client-fingerprint: chrome
-      name: us美国_547
-      network: ws
-      port: 443
-      server: 146.75.57.111
-      servername: cdn.akamai.steamstatic.com
-      tls: true
-      type: vless
-      uuid: afed9510-8648-49c6-9fbd-c2d4d8bdd417
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
-        path: /
-    - client-fingerprint: chrome
-      name: us美国_548
-      network: ws
-      port: 443
-      server: 146.75.59.186
-      servername: community.fastly.steamstatic.com
-      tls: true
-      type: vless
-      uuid: 58d2fb1c-7ae2-42c8-8c0d-a393603ebc9f
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_6i.global.ssl.fastly.net.
-        path: /
-    - name: es西班牙_1
-      port: 3389
-      server: s--p.tufmuk.ir
-      type: vless
-      uuid: e7a05cf9-293c-42e6-9bb6-d165df68b165
-    - client-fingerprint: chrome
-      name: us美国_549
-      network: ws
-      port: 443
-      server: wwww.qarvian.ir
-      servername: cdn.akamai.steamstatic.com
-      tls: true
-      type: vless
-      uuid: 58d2fb1c-7ae2-42c8-8c0d-a393603ebc9f
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_7i.global.ssl.fastly.net.
-        path: /
-    - name: tr土耳其_1
-      network: ws
-      port: 2053
-      server: rm4.rmastore.ir
-      type: vless
-      uuid: 116e7d57-afcf-4558-be0a-01e80fe6cd31
-      ws-opts:
-        headers:
-            Host: rm4.rmastore.ir
-        path: /nlrma
+      type: anytls
     - alterId: 0
       cipher: auto
-      name: TW_43|348KB/s
+      name: TW_40|254KB/s
       network: ws
       port: 443
       server: terutrrj.d6f54hd1j.cc
@@ -734,39 +625,8 @@ proxies:
             Host: terutrrj.d6f54hd1j.cc
         path: /
     - client-fingerprint: chrome
-      name: us美国_550
-      network: ws
-      port: 8443
-      server: news.zoom.us
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - name: es西班牙_2
-      port: 3389
-      server: 194.62.97.228
-      type: vless
-      uuid: e7a05cf9-293c-42e6-9bb6-d165df68b165
-    - client-fingerprint: chrome
-      name: usUS_551
-      network: ws
-      port: 443
-      server: 104.17.98.5
-      servername: newcf.jisucf.cloudns.ch
-      tls: true
-      type: vless
-      uuid: 49ccad64-c854-4f33-b334-793cf0d02b74
-      ws-opts:
-        headers:
-            Host: newcf.jisucf.cloudns.ch
-        path: /
-    - client-fingerprint: chrome
       flow: xtls-rprx-vision
-      name: us美国_552
+      name: us美国_21
       port: 443
       reality-opts:
         public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
@@ -776,176 +636,8 @@ proxies:
       tls: true
       type: vless
       uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
-    - client-fingerprint: chrome
-      name: us美国_553
-      network: ws
-      port: 443
-      server: 199.232.78.160
-      servername: community.fastly.steamstatic.com
-      tls: true
-      type: vless
-      uuid: 58d2fb1c-7ae2-42c8-8c0d-a393603ebc9f
-      ws-opts:
-        headers:
-            Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-        path: /
-    - client-fingerprint: firefox
-      name: us美国_554
-      port: 443
-      reality-opts:
-        public-key: -Kj5RBoDmULkrxxd6qNDAfpfoPpL9DY07FRVM_TME1M
-        short-id: 30eb12b1050ee52d
-      server: 185.255.115.58
-      servername: 5e094at.de27.h1clayd.click
-      tls: true
-      type: vless
-      uuid: 3ceda178-78fe-4695-a1ef-a591ae7a2c97
-    - client-fingerprint: firefox
-      grpc-opts:
-        grpc-service-name: 97fb546ddb99
-      name: us美国_555
-      network: grpc
-      port: 443
-      reality-opts:
-        public-key: AN1ASOcjxq1GWkCMBFT_yBRPkCbDr8i58S7o_CzMQmI
-        short-id: 8ddf8704a2cdcbc7
-      server: 5406e6g.de27.h1clayd.click
-      servername: 5406e6g.de27.h1clayd.click
-      tls: true
-      type: vless
-      uuid: 3ceda178-78fe-4695-a1ef-a591ae7a2c97
-    - client-fingerprint: chrome
-      name: usUS_556
-      network: ws
-      port: 443
-      server: 104.16.10.103
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_557
-      network: ws
-      port: 443
-      server: 104.16.10.191
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_558
-      network: ws
-      port: 443
-      server: 104.17.117.137
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_559
-      network: ws
-      port: 443
-      server: 104.24.11.68
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_560
-      network: ws
-      port: 443
-      server: 104.19.32.166
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_561
-      network: ws
-      port: 443
-      server: 104.16.10.104
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_562
-      network: ws
-      port: 443
-      server: 104.16.10.235
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_563
-      network: ws
-      port: 443
-      server: 104.16.10.2
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: nl荷兰_3
-      network: ws
-      port: 443
-      server: goold.zovip2.ir
-      servername: goold.zovip2.ir
-      tls: true
-      type: vless
-      uuid: d8dcb071-57db-4ed6-92af-bb4183a14168
-      ws-opts:
-        headers:
-            Host: goold.zovip2.ir
-        path: /api/v3/pulse
-    - client-fingerprint: chrome
-      name: usUS_564
-      network: ws
-      port: 443
-      server: 104.21.236.63
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
     - client-fingerprint: unsafe
-      name: us美国_565
+      name: us美国_22
       network: ws
       port: 443
       server: 151.101.1.242
@@ -957,21 +649,8 @@ proxies:
         headers:
             Host: minimize-evenness.cdn-content.com
         path: /ws
-    - client-fingerprint: chrome
-      name: usUS_566
-      network: ws
-      port: 443
-      server: 104.21.5.75
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
     - client-fingerprint: unsafe
-      name: usUS_567
+      name: usUS_23
       network: ws
       port: 443
       server: 104.16.10.233
@@ -984,33 +663,7 @@ proxies:
             Host: u.srilankangrill.online
         path: /
     - client-fingerprint: chrome
-      name: usUS_568
-      network: ws
-      port: 443
-      server: 104.16.10.117
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_569
-      network: ws
-      port: 443
-      server: 104.16.156.227
-      servername: u.srilankangrill.online
-      tls: true
-      type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-      ws-opts:
-        headers:
-            Host: u.srilankangrill.online
-        path: /
-    - client-fingerprint: chrome
-      name: usUS_570
+      name: usUS_24
       network: ws
       port: 443
       server: 104.19.178.244
@@ -1022,11 +675,38 @@ proxies:
         headers:
             Host: u.srilankangrill.online
         path: /
+    - name: us美国_25
+      password: 1d491f8c-ccaa-43e1-b62d-f255c7832e27
+      port: 51000
+      server: 129.146.124.201
+      skip-cert-verify: true
+      sni: cn.cremedelamer.com
+      type: hysteria2
     - client-fingerprint: chrome
-      name: usUS_571
+      name: usUS_26
       network: ws
       port: 443
-      server: 188.114.97.6
+      server: 104.16.10.117
+      servername: u.srilankangrill.online
+      tls: true
+      type: vless
+      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+      ws-opts:
+        headers:
+            Host: u.srilankangrill.online
+        path: /
+    - name: in印度_1
+      password: d105c6ae-621b-47c1-b85b-075fd6a39aca
+      port: 51000
+      server: 144.24.109.215
+      skip-cert-verify: true
+      sni: cn.cremedelamer.com
+      type: hysteria2
+    - client-fingerprint: chrome
+      name: sg新加坡_9
+      network: ws
+      port: 443
+      server: 103.25.202.25
       servername: u.srilankangrill.online
       tls: true
       type: vless
@@ -1036,92 +716,87 @@ proxies:
             Host: u.srilankangrill.online
         path: /
     - client-fingerprint: chrome
-      name: usUS_572
+      name: usUS_27
       network: ws
       port: 443
-      server: 104.16.10.234
-      servername: u.srilankangrill.online
+      server: mao.kipfelmao.de5.net
+      servername: mao.kipfelmao.de5.net
       tls: true
       type: vless
-      uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+      uuid: 30610baf-4645-4c7b-9a22-0d0a0a79eab5
       ws-opts:
         headers:
-            Host: u.srilankangrill.online
-        path: /
+            Host: mao.kipfelmao.de5.net
+        path: /api/v1/guests/profiles/5de14443985f/
     - client-fingerprint: chrome
-      name: ir伊朗_2
-      port: 48312
+      flow: xtls-rprx-vision
+      name: us美国_28
+      port: 21899
       reality-opts:
-        public-key: d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y
-        short-id: 902c315efc
-      server: tunell2027.crackerbinam.org
-      servername: www.cloudflare.com
+        public-key: kvLUYW6fwHXutu8Z4On6mi61kjslCyCc8ErFffUM1D0
+        short-id: dedce016e3671418
+      server: 72.249.201.21
+      servername: yahoo.com
       tls: true
       type: vless
-      uuid: f47057d5-120d-4b42-b6d6-30469aef6813
+      uuid: fb69a6b9-980c-48c2-a94f-5f95868a2d2a
     - cipher: aes-256-gcm
-      name: it意大利_21
+      name: it意大利_19
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
       server: 202.50.253.63
       type: ss
     - cipher: aes-256-gcm
-      name: it意大利_22
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.27
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_23
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.36
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_24
+      name: it意大利_20
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
       server: 202.50.253.45
       type: ss
     - cipher: aes-256-gcm
-      name: it意大利_25
+      name: it意大利_21
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.99
+      server: 202.50.253.36
       type: ss
     - cipher: aes-256-gcm
-      name: it意大利_26
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.72
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_27
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.81
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_28
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.18
-      type: ss
-    - cipher: aes-256-gcm
-      name: it意大利_29
+      name: it意大利_22
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
       server: 202.50.253.90
       type: ss
     - cipher: aes-256-gcm
-      name: it意大利_30
+      name: it意大利_23
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.18
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_24
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.27
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_25
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
       server: 202.50.253.54
       type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_26
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.81
+      type: ss
+    - cipher: aes-256-gcm
+      name: it意大利_27
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.72
+      type: ss
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
-      name: de德国_39
+      name: de德国_8
       port: 443
       reality-opts:
         public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -1131,18 +806,18 @@ proxies:
       type: vless
       uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
     - client-fingerprint: chrome
-      name: ir伊朗_5
-      port: 48312
+      flow: xtls-rprx-vision
+      name: de德国_9
+      port: 443
       reality-opts:
-        public-key: d9eM_jy8ztZrOf3DMq1m55VQSo7bnKcG1dRnO9ktJ2Y
-        short-id: 902c315efc
-      server: tunell2027.crackerbinam.org
-      servername: www.cloudflare.com
+        public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+      server: 9.247.23.209
+      servername: mother-earth.fyi
       tls: true
       type: vless
-      uuid: f47057d5-120d-4b42-b6d6-30469aef6813
+      uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
     - client-fingerprint: firefox
-      name: us美国_838
+      name: us美国_29
       network: xhttp
       port: 443
       server: 31.76.7.233
@@ -1152,33 +827,9 @@ proxies:
       uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
       xhttp-opts:
         path: /conv4/stream/d34366ecdd31367d0fc76955c6b8d77c
-    - alterId: 0
-      cipher: auto
-      name: 美国(yudou99.com 玉豆分享)
-      network: ws
-      port: 443
-      server: cf.0sm.com
-      tls: true
-      type: vmess
-      uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-      ws-opts:
-        headers:
-            Host: vmess.lbw666.dpdns.org
-        path: /ws
-    - name: ZZUnknown_21
-      port: 80
-      server: sdct.sernett.ir
-      type: vless
-      uuid: SERVERNETT-SERVERNETT1
-    - name: se瑞典_7
-      network: httpupgrade
-      port: 8880
-      server: 185.146.173.39
-      type: vless
-      uuid: Parsashonam-304
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
-      name: de德国_41
+      name: de德国_10
       port: 443
       reality-opts:
         public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -1189,7 +840,7 @@ proxies:
       uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
     - client-fingerprint: chrome
       flow: xtls-rprx-vision
-      name: de德国_42
+      name: de德国_11
       port: 443
       reality-opts:
         public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
@@ -1198,33 +849,26 @@ proxies:
       tls: true
       type: vless
       uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
-    - name: us美国_852
+    - name: us美国_30
       password: a35c508f-4d5d-4531-842e-6e9d43c762c0
       port: 4444
       server: pl2.nexfile.net
       sni: pl2.nexfile.net
       type: hysteria2
-    - name: us美国_853
-      password: 1d491f8c-ccaa-43e1-b62d-f255c7832e27
-      port: 51000
-      server: 129.146.124.201
-      skip-cert-verify: true
-      sni: cn.cremedelamer.com
-      type: hysteria2
-    - name: in印度_4
-      password: d105c6ae-621b-47c1-b85b-075fd6a39aca
-      port: 51000
-      server: 144.24.109.215
-      skip-cert-verify: true
-      sni: cn.cremedelamer.com
-      type: hysteria2
-    - name: us美国_854
+    - name: us美国_31
       password: a35c508f-4d5d-4531-842e-6e9d43c762c0
       port: 4444
       server: 13.143.189.147
       sni: pl2.nexfile.net
       type: hysteria2
-    - name: us美国_855
+    - name: us美国_32
+      password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+      port: 4444
+      server: pl2.nexfile.net
+      skip-cert-verify: true
+      sni: pl2.nexfile.net
+      type: hysteria2
+    - name: us美国_33
       password: a35c508f-4d5d-4531-842e-6e9d43c762c0
       port: 4444
       server: 13.143.189.147
@@ -1236,117 +880,93 @@ proxy-groups:
       interval: 600
       name: 自动选优
       proxies:
+        - us美国_1
+        - us美国_2
+        - us美国_3
+        - ru俄罗斯联邦_1
         - it意大利_1
         - it意大利_2
         - it意大利_3
         - it意大利_4
         - it意大利_5
         - it意大利_6
+        - ru俄罗斯联邦_2
         - it意大利_7
         - it意大利_8
-        - it意大利_9
-        - it意大利_10
+        - ru俄罗斯联邦_3
+        - jp日本_1
+        - us美国_4
+        - us美国_5
+        - jp日本_2
+        - us美国_6
         - sg新加坡_1
         - sg新加坡_2
-        - jp日本_1
-        - us美国_1
-        - us美国_2
-        - jp日本_2
+        - us美国_7
         - sg新加坡_3
+        - us美国_8
+        - us美国_9
         - jp日本_3
-        - sg新加坡_4
-        - us美国_3
         - jp日本_4
-        - us美国_4
-        - sg新加坡_5
-        - sg新加坡_6
+        - sg新加坡_4
         - jp日本_5
         - jp日本_6
-        - us美国_5
-        - us美国_6
-        - hk香港_1
-        - nl荷兰_1
+        - us美国_10
+        - sg新加坡_5
+        - us美国_11
+        - us美国_12
+        - sg新加坡_6
+        - it意大利_9
+        - it意大利_10
         - it意大利_11
+        - us美国_13
         - it意大利_12
         - it意大利_13
-        - us美国_7
-        - usUS_8
         - it意大利_14
         - it意大利_15
         - it意大利_16
-        - jp日本_7
         - it意大利_17
         - it意大利_18
         - de德国_1
         - de德国_2
-        - ' 美国 18'
-        - us美国_10
-        - de德国_3
-        - it意大利_19
-        - it意大利_20
-        - de德国_4
-        - us美国_11
-        - usUS_12
-        - us美国_13
+        - tw台湾_1
+        - tw台湾_2
         - us美国_14
         - us美国_15
         - us美国_16
-        - ir伊朗_1
-        - us美国_17
+        - de德国_3
+        - de德国_4
+        - nl荷兰_1
+        - nl荷兰_2
+        - pl波兰_1
+        - se瑞典_1
+        - se瑞典_2
+        - de德国_5
+        - de德国_6
+        - sg新加坡_7
+        - ' AetrisVPN'
+        - US_431|215KB/s|S004-260618
+        - de德国_7
         - us美国_18
         - us美国_19
         - us美国_20
-        - de德国_5
-        - de德国_7
-        - sg新加坡_7
-        - au澳大利亚_1
-        - ZZUnknown_9
-        - jp日本_8
-        - fr法国_8
-        - usUS_536
-        - usUS_537
-        - usUS_538
-        - usUS_539
-        - usUS_540
-        - us美国_541
-        - us美国_542
-        - us美国_543
-        - se瑞典_5
-        - us美国_544
-        - us美国_545
-        - us美国_546
-        - us美国_547
-        - us美国_548
-        - es西班牙_1
-        - us美国_549
-        - tr土耳其_1
-        - TW_43|348KB/s
-        - us美国_550
-        - es西班牙_2
-        - usUS_551
-        - us美国_552
-        - us美国_553
-        - us美国_554
-        - us美国_555
-        - usUS_556
-        - usUS_557
-        - usUS_558
-        - usUS_559
-        - usUS_560
-        - usUS_561
-        - usUS_562
-        - usUS_563
+        - se瑞典_3
         - nl荷兰_3
-        - usUS_564
-        - us美国_565
-        - usUS_566
-        - usUS_567
-        - usUS_568
-        - usUS_569
-        - usUS_570
-        - usUS_571
-        - usUS_572
-        - ir伊朗_2
+        - fi芬兰_1
+        - sg新加坡_8
+        - tw台湾_3
+        - TW_40|254KB/s
+        - us美国_21
+        - us美国_22
+        - usUS_23
+        - usUS_24
+        - us美国_25
+        - usUS_26
+        - in印度_1
+        - sg新加坡_9
+        - usUS_27
+        - us美国_28
+        - it意大利_19
+        - it意大利_20
         - it意大利_21
         - it意大利_22
         - it意大利_23
@@ -1354,22 +974,15 @@ proxy-groups:
         - it意大利_25
         - it意大利_26
         - it意大利_27
-        - it意大利_28
-        - it意大利_29
-        - it意大利_30
-        - de德国_39
-        - ir伊朗_5
-        - us美国_838
-        - 美国(yudou99.com 玉豆分享)
-        - ZZUnknown_21
-        - se瑞典_7
-        - de德国_41
-        - de德国_42
-        - us美国_852
-        - us美国_853
-        - in印度_4
-        - us美国_854
-        - us美国_855
+        - de德国_8
+        - de德国_9
+        - us美国_29
+        - de德国_10
+        - de德国_11
+        - us美国_30
+        - us美国_31
+        - us美国_32
+        - us美国_33
       tolerance: 100
       type: url-test
       url: http://www.gstatic.com/generate_204
@@ -1377,117 +990,93 @@ proxy-groups:
       interval: 600
       name: Gemini服务
       proxies:
+        - us美国_1
+        - us美国_2
+        - us美国_3
+        - ru俄罗斯联邦_1
         - it意大利_1
         - it意大利_2
         - it意大利_3
         - it意大利_4
         - it意大利_5
         - it意大利_6
+        - ru俄罗斯联邦_2
         - it意大利_7
         - it意大利_8
-        - it意大利_9
-        - it意大利_10
+        - ru俄罗斯联邦_3
+        - jp日本_1
+        - us美国_4
+        - us美国_5
+        - jp日本_2
+        - us美国_6
         - sg新加坡_1
         - sg新加坡_2
-        - jp日本_1
-        - us美国_1
-        - us美国_2
-        - jp日本_2
+        - us美国_7
         - sg新加坡_3
+        - us美国_8
+        - us美国_9
         - jp日本_3
-        - sg新加坡_4
-        - us美国_3
         - jp日本_4
-        - us美国_4
-        - sg新加坡_5
-        - sg新加坡_6
+        - sg新加坡_4
         - jp日本_5
         - jp日本_6
-        - us美国_5
-        - us美国_6
-        - hk香港_1
-        - nl荷兰_1
+        - us美国_10
+        - sg新加坡_5
+        - us美国_11
+        - us美国_12
+        - sg新加坡_6
+        - it意大利_9
+        - it意大利_10
         - it意大利_11
+        - us美国_13
         - it意大利_12
         - it意大利_13
-        - us美国_7
-        - usUS_8
         - it意大利_14
         - it意大利_15
         - it意大利_16
-        - jp日本_7
         - it意大利_17
         - it意大利_18
         - de德国_1
         - de德国_2
-        - ' 美国 18'
-        - us美国_10
-        - de德国_3
-        - it意大利_19
-        - it意大利_20
-        - de德国_4
-        - us美国_11
-        - usUS_12
-        - us美国_13
+        - tw台湾_1
+        - tw台湾_2
         - us美国_14
         - us美国_15
         - us美国_16
-        - ir伊朗_1
-        - us美国_17
+        - de德国_3
+        - de德国_4
+        - nl荷兰_1
+        - nl荷兰_2
+        - pl波兰_1
+        - se瑞典_1
+        - se瑞典_2
+        - de德国_5
+        - de德国_6
+        - sg新加坡_7
+        - ' AetrisVPN'
+        - US_431|215KB/s|S004-260618
+        - de德国_7
         - us美国_18
         - us美国_19
         - us美国_20
-        - de德国_5
-        - de德国_7
-        - sg新加坡_7
-        - au澳大利亚_1
-        - ZZUnknown_9
-        - jp日本_8
-        - fr法国_8
-        - usUS_536
-        - usUS_537
-        - usUS_538
-        - usUS_539
-        - usUS_540
-        - us美国_541
-        - us美国_542
-        - us美国_543
-        - se瑞典_5
-        - us美国_544
-        - us美国_545
-        - us美国_546
-        - us美国_547
-        - us美国_548
-        - es西班牙_1
-        - us美国_549
-        - tr土耳其_1
-        - TW_43|348KB/s
-        - us美国_550
-        - es西班牙_2
-        - usUS_551
-        - us美国_552
-        - us美国_553
-        - us美国_554
-        - us美国_555
-        - usUS_556
-        - usUS_557
-        - usUS_558
-        - usUS_559
-        - usUS_560
-        - usUS_561
-        - usUS_562
-        - usUS_563
+        - se瑞典_3
         - nl荷兰_3
-        - usUS_564
-        - us美国_565
-        - usUS_566
-        - usUS_567
-        - usUS_568
-        - usUS_569
-        - usUS_570
-        - usUS_571
-        - usUS_572
-        - ir伊朗_2
+        - fi芬兰_1
+        - sg新加坡_8
+        - tw台湾_3
+        - TW_40|254KB/s
+        - us美国_21
+        - us美国_22
+        - usUS_23
+        - usUS_24
+        - us美国_25
+        - usUS_26
+        - in印度_1
+        - sg新加坡_9
+        - usUS_27
+        - us美国_28
+        - it意大利_19
+        - it意大利_20
         - it意大利_21
         - it意大利_22
         - it意大利_23
@@ -1495,22 +1084,15 @@ proxy-groups:
         - it意大利_25
         - it意大利_26
         - it意大利_27
-        - it意大利_28
-        - it意大利_29
-        - it意大利_30
-        - de德国_39
-        - ir伊朗_5
-        - us美国_838
-        - 美国(yudou99.com 玉豆分享)
-        - ZZUnknown_21
-        - se瑞典_7
-        - de德国_41
-        - de德国_42
-        - us美国_852
-        - us美国_853
-        - in印度_4
-        - us美国_854
-        - us美国_855
+        - de德国_8
+        - de德国_9
+        - us美国_29
+        - de德国_10
+        - de德国_11
+        - us美国_30
+        - us美国_31
+        - us美国_32
+        - us美国_33
       tolerance: 100
       type: url-test
       url: http://www.gstatic.com/generate_204
@@ -1518,117 +1100,93 @@ proxy-groups:
       proxies:
         - 自动选优
         - Gemini服务
+        - us美国_1
+        - us美国_2
+        - us美国_3
+        - ru俄罗斯联邦_1
         - it意大利_1
         - it意大利_2
         - it意大利_3
         - it意大利_4
         - it意大利_5
         - it意大利_6
+        - ru俄罗斯联邦_2
         - it意大利_7
         - it意大利_8
-        - it意大利_9
-        - it意大利_10
+        - ru俄罗斯联邦_3
+        - jp日本_1
+        - us美国_4
+        - us美国_5
+        - jp日本_2
+        - us美国_6
         - sg新加坡_1
         - sg新加坡_2
-        - jp日本_1
-        - us美国_1
-        - us美国_2
-        - jp日本_2
+        - us美国_7
         - sg新加坡_3
+        - us美国_8
+        - us美国_9
         - jp日本_3
-        - sg新加坡_4
-        - us美国_3
         - jp日本_4
-        - us美国_4
-        - sg新加坡_5
-        - sg新加坡_6
+        - sg新加坡_4
         - jp日本_5
         - jp日本_6
-        - us美国_5
-        - us美国_6
-        - hk香港_1
-        - nl荷兰_1
+        - us美国_10
+        - sg新加坡_5
+        - us美国_11
+        - us美国_12
+        - sg新加坡_6
+        - it意大利_9
+        - it意大利_10
         - it意大利_11
+        - us美国_13
         - it意大利_12
         - it意大利_13
-        - us美国_7
-        - usUS_8
         - it意大利_14
         - it意大利_15
         - it意大利_16
-        - jp日本_7
         - it意大利_17
         - it意大利_18
         - de德国_1
         - de德国_2
-        - ' 美国 18'
-        - us美国_10
-        - de德国_3
-        - it意大利_19
-        - it意大利_20
-        - de德国_4
-        - us美国_11
-        - usUS_12
-        - us美国_13
+        - tw台湾_1
+        - tw台湾_2
         - us美国_14
         - us美国_15
         - us美国_16
-        - ir伊朗_1
-        - us美国_17
+        - de德国_3
+        - de德国_4
+        - nl荷兰_1
+        - nl荷兰_2
+        - pl波兰_1
+        - se瑞典_1
+        - se瑞典_2
+        - de德国_5
+        - de德国_6
+        - sg新加坡_7
+        - ' AetrisVPN'
+        - US_431|215KB/s|S004-260618
+        - de德国_7
         - us美国_18
         - us美国_19
         - us美国_20
-        - de德国_5
-        - de德国_7
-        - sg新加坡_7
-        - au澳大利亚_1
-        - ZZUnknown_9
-        - jp日本_8
-        - fr法国_8
-        - usUS_536
-        - usUS_537
-        - usUS_538
-        - usUS_539
-        - usUS_540
-        - us美国_541
-        - us美国_542
-        - us美国_543
-        - se瑞典_5
-        - us美国_544
-        - us美国_545
-        - us美国_546
-        - us美国_547
-        - us美国_548
-        - es西班牙_1
-        - us美国_549
-        - tr土耳其_1
-        - TW_43|348KB/s
-        - us美国_550
-        - es西班牙_2
-        - usUS_551
-        - us美国_552
-        - us美国_553
-        - us美国_554
-        - us美国_555
-        - usUS_556
-        - usUS_557
-        - usUS_558
-        - usUS_559
-        - usUS_560
-        - usUS_561
-        - usUS_562
-        - usUS_563
+        - se瑞典_3
         - nl荷兰_3
-        - usUS_564
-        - us美国_565
-        - usUS_566
-        - usUS_567
-        - usUS_568
-        - usUS_569
-        - usUS_570
-        - usUS_571
-        - usUS_572
-        - ir伊朗_2
+        - fi芬兰_1
+        - sg新加坡_8
+        - tw台湾_3
+        - TW_40|254KB/s
+        - us美国_21
+        - us美国_22
+        - usUS_23
+        - usUS_24
+        - us美国_25
+        - usUS_26
+        - in印度_1
+        - sg新加坡_9
+        - usUS_27
+        - us美国_28
+        - it意大利_19
+        - it意大利_20
         - it意大利_21
         - it意大利_22
         - it意大利_23
@@ -1636,22 +1194,15 @@ proxy-groups:
         - it意大利_25
         - it意大利_26
         - it意大利_27
-        - it意大利_28
-        - it意大利_29
-        - it意大利_30
-        - de德国_39
-        - ir伊朗_5
-        - us美国_838
-        - 美国(yudou99.com 玉豆分享)
-        - ZZUnknown_21
-        - se瑞典_7
-        - de德国_41
-        - de德国_42
-        - us美国_852
-        - us美国_853
-        - in印度_4
-        - us美国_854
-        - us美国_855
+        - de德国_8
+        - de德国_9
+        - us美国_29
+        - de德国_10
+        - de德国_11
+        - us美国_30
+        - us美国_31
+        - us美国_32
+        - us美国_33
         - DIRECT
       type: select
 rule-providers:
