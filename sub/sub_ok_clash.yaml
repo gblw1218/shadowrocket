@@ -21,12 +21,6 @@ log-level: warning
 mixed-port: 7890
 mode: rule
 proxies:
-    - name: 新加坡_1
-      password: d9064589-74af-432a-9390-5d8a9da281bf
-      port: 20051
-      server: sclass-c2.catcat321.com
-      sni: hk.catxstar.com
-      type: trojan
     - cipher: aes-256-gcm
       name: 意大利_1
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -125,308 +119,35 @@ proxies:
       port: 19999
       server: 202.50.253.18
       type: ss
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: 新加坡_2
-      port: 443
-      reality-opts:
-        public-key: mXQudYHNu0pebcdk1_qn-UgcmwhjaV7y9UrYu3HX7Rg
-        short-id: 0123456789abcdef
-      server: 43.163.112.174
-      servername: www.cloudflare.com
-      tls: true
-      type: vless
-      uuid: 0dedd47d-47b9-4ed1-9c9f-cbeecad57a68
-    - cipher: 2022-blake3-chacha20-poly1305
-      name: 德国_1
-      password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-      port: 443
-      server: 47.254.167.157
-      type: ss
-    - client-fingerprint: chrome
-      name: 美国_2
-      network: ws
-      port: 443
-      reality-opts:
-        public-key: BHBzo_I0M-sChoOqTyOczYBP8l1L_dkmB6u3ijAOaGo
-        short-id: 664c1530
-      server: 172.236.227.60
-      servername: itunes.apple.com
-      tls: true
-      type: vless
-      uuid: 3c8a110d-f04d-4f0e-9579-fd00631b8830
-      ws-opts:
-        headers:
-            Host: itunes.apple.com
-        path: /ws
-    - client-fingerprint: chrome
-      name: 美国_3
-      network: ws
-      port: 443
-      reality-opts:
-        public-key: M6kLOIYA9IagUu0eiplnPZFObYVzTc4GfPyEqKQnZWQ
-        short-id: 8353867a
-      server: 172.236.231.45
-      servername: itunes.apple.com
-      tls: true
-      type: vless
-      uuid: 4c4f7955-3b05-4795-b3b7-6c83b7f82b0f
-      ws-opts:
-        headers:
-            Host: itunes.apple.com
-        path: /ws
-    - cipher: 2022-blake3-chacha20-poly1305
-      name: 美国_4
-      password: 1KRWYoNOBU1OXV+dLChiRageSP9uIRY2wsJPieRC7kY=
-      port: 50356
-      server: 129.146.200.42
-      type: ss
-    - client-fingerprint: chrome
-      name: 美国_5
-      network: ws
-      port: 443
-      reality-opts:
-        public-key: f9D1ZzG6vP1HgjCaCIutbykWkab8VEDuitwuwaeuBgY
-        short-id: 4206512a
-      server: 172.233.142.149
-      servername: itunes.apple.com
-      tls: true
-      type: vless
-      uuid: 61e3954d-0d66-4b69-b6cd-9b4fc2352303
-      ws-opts:
-        headers:
-            Host: itunes.apple.com
-        path: /ws
-    - client-fingerprint: chrome
-      name: 美国_6
-      network: ws
-      port: 443
-      reality-opts:
-        public-key: ZZwZGoX0Us8t6nLvckDWskC1c25F9rL0_nUXmd8BFxQ
-        short-id: 8dd324c1
-      server: 107.191.58.86
-      servername: itunes.apple.com
-      tls: true
-      type: vless
-      uuid: 4444e77e-3d2a-4dc9-bf31-936f038f5570
-      ws-opts:
-        headers:
-            Host: itunes.apple.com
-        path: /ws
-    - client-fingerprint: chrome
-      name: 美国_7
-      network: ws
-      port: 443
-      reality-opts:
-        public-key: cQZ-dTY4QSQteDYpngP2PavOsn9yY9lIP-OscwzwAio
-        short-id: 4dda4608
-      server: 45.32.70.42
-      servername: itunes.apple.com
-      tls: true
-      type: vless
-      uuid: 8c392beb-524d-4d0a-a3a6-4d542d54a1ff
-      ws-opts:
-        headers:
-            Host: itunes.apple.com
-        path: /ws
-    - client-fingerprint: chrome
-      name: 美国_8
-      network: ws
-      port: 443
-      reality-opts:
-        public-key: ibi0jOH5SfYhh7ycxdBrqq5oN4ajN3-dNiHKWC2VYWs
-        short-id: 51ecfe9e
-      server: 172.236.241.130
-      servername: itunes.apple.com
-      tls: true
-      type: vless
-      uuid: 21117a67-21c2-4e2a-ba8f-bc49e23b0ae8
-      ws-opts:
-        headers:
-            Host: itunes.apple.com
-        path: /ws
-    - cipher: aes-256-gcm
-      name: 意大利_15
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.18
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_16
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.99
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_17
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.45
-      type: ss
-    - client-fingerprint: chrome
-      name: 日本_1
-      network: ws
-      port: 443
-      reality-opts:
-        public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
-        short-id: e535df57
-      server: 149.28.29.156
-      servername: itunes.apple.com
-      tls: true
-      type: vless
-      uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
-      ws-opts:
-        headers:
-            Host: itunes.apple.com
-        path: /ws
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: 新加坡_3
-      port: 443
-      reality-opts:
-        public-key: mXQudYHNu0pebcdk1_qn-UgcmwhjaV7y9UrYu3HX7Rg
-        short-id: 0123456789abcdef
-      server: 43.163.112.174
-      servername: www.cloudflare.com
-      tls: true
-      type: vless
-      uuid: 0dedd47d-47b9-4ed1-9c9f-cbeecad57a68
-    - client-fingerprint: chrome
-      name: US_9
-      network: ws
-      port: 443
-      server: 104.26.1.1
-      servername: ipauto-edge.pages.dev
-      tls: true
-      type: vless
-      uuid: 2900cf6a-b708-4358-8d38-189a4ad4cae7
-      ws-opts:
-        headers:
-            Host: ipauto-edge.pages.dev
-        path: /video/SRtESRMDFFsPCkNESA8YEV1XXkwKUlVIEwIbUAZZSgVaWEsFBw0eAVBEGkNdDUVEGhcNAwwIUA==
-    - client-fingerprint: chrome
-      name: US_10
-      network: ws
-      port: 443
-      server: cdn.ctn32.us.kg
-      servername: ipauto-edge.pages.dev
-      tls: true
-      type: vless
-      uuid: 2900cf6a-b708-4358-8d38-189a4ad4cae7
-      ws-opts:
-        headers:
-            Host: ipauto-edge.pages.dev
-        path: /video/SRtESRMDFFsPEURESA8YEUBLSEoKUlVIEwIbF0QPRhhBEQREQU5fQgdEDENbElkSFA9cXEZMQ1kJVhoXE05JDw1RUwVXWFUPAhdfQAYIURYDDFJEGgEWQ1pKWRpeAg0VAUU=
-    - client-fingerprint: chrome
-      name: US_11
-      network: ws
-      port: 443
-      server: cdn.204910.best
-      servername: ipauto-edge.pages.dev
-      tls: true
-      type: vless
-      uuid: 2900cf6a-b708-4358-8d38-189a4ad4cae7
-      ws-opts:
-        headers:
-            Host: ipauto-edge.pages.dev
-        path: /video/SRtESRMDFFsPEURESA8YEUBLSEoKUlVIEwIbF0QPRhhBEQREQU5fQgdEDENbElkSFA9cXEZMQ1kJVhoXE0hMA1gIBxkVEQsaAQ4eXxMDWAZaTFlVTA8YEUVXX0xGCQwZAkU=
-    - client-fingerprint: chrome
-      name: US_12
-      network: ws
-      port: 443
-      server: op.chinwa.eu.cc
-      servername: ipauto-edge.pages.dev
-      tls: true
-      type: vless
-      uuid: 2900cf6a-b708-4358-8d38-189a4ad4cae7
-      ws-opts:
-        headers:
-            Host: ipauto-edge.pages.dev
-        path: /video/SRtESRMDFFsPEURESA8YEUBLSEoKUlVIEwIbF0QPRhhBEQREQU5fQgdEDENbElkSFA9cXEZMQ1kJVhoXE0hMA1gIBxkVEQsaAwgHHgwWUw9KFRleXVkWHxdIQkoQEQIZBQtE
-    - client-fingerprint: chrome
-      name: US_13
-      network: ws
-      port: 443
-      server: cdn.ctn32.us.kg
-      servername: ipauto-edge.pages.dev
-      tls: true
-      type: vless
-      uuid: 2900cf6a-b708-4358-8d38-189a4ad4cae7
-      ws-opts:
-        headers:
-            Host: ipauto-edge.pages.dev
-        path: /video/SRtESRMDFFsPEURESA8YEUBLSEoKUlVIEwIbF0QPRhhBEQREQU5fQgdEDENbElkSFA9cXEZMQ1kJVhoXE0hMA1gIBxkVEQsaBw4eXxMDWAZaTFlVTA8YEUVXX0xGCQwZAkU=
-    - cipher: aes-256-gcm
-      name: 意大利_18
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.63
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_19
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.81
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_20
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.27
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_21
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.99
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_22
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.72
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_23
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.54
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_24
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.18
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_25
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.36
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_26
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.45
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_27
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.90
-      type: ss
-    - cipher: aes-256-gcm
-      name: 意大利_28
-      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-      port: 19999
-      server: 202.50.253.54
-      type: ss
     - alpn:
         - h3
       auth-str: dongtaiwang.com
       down: "55"
-      name: 美国_14
+      name: 美国_2
+      port: 11008
+      protocol: udp
+      server: 38.6.222.131
+      skip-cert-verify: true
+      sni: bing.com
+      type: hysteria
+      up: "11"
+    - alpn:
+        - h3
+      auth-str: dongtaiwang.com
+      down: "55"
+      name: 美国_3
+      port: 20022
+      protocol: udp
+      server: 137.175.82.41
+      skip-cert-verify: true
+      sni: bing.com
+      type: hysteria
+      up: "11"
+    - alpn:
+        - h3
+      auth-str: dongtaiwang.com
+      down: "55"
+      name: 美国_4
       port: 11008
       protocol: udp
       server: 38.6.222.132
@@ -434,36 +155,67 @@ proxies:
       sni: bing.com
       type: hysteria
       up: "11"
-    - name: 台湾_1
-      password: 2902c46c8493
-      port: 443
-      server: rtifgjdr.df6h451rh.xin
-      servername: docs.microsoft.com
+    - alpn:
+        - h3
+      auth-str: dongtaiwang.com
+      down: "55"
+      name: 法国_1
+      port: 24667
+      protocol: udp
+      server: 62.210.124.132
       skip-cert-verify: true
-      tls: true
-      type: anytls
-    - name: 台湾_2
-      password: 2902c46c8493
+      type: hysteria
+      up: "11"
+    - name: 德国_1
+      password: M2NbFywBXjS9Ova8SgqRrQkp
       port: 443
-      server: rtifgjdr.df6h451rh.xin
-      servername: docs.microsoft.com
+      server: de-tg.fastlanehosting.ru
+      sni: de-tg.fastlanehosting.ru
+      type: hysteria2
+    - alpn:
+        - h3
+      auth-str: github.com/Alvin9999-newpac/fanqiang
+      down: "55"
+      name: 美国_5
+      port: 22335
+      protocol: udp
+      server: 198.200.57.142
       skip-cert-verify: true
-      tls: true
-      type: anytls
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: 新加坡_4
+      sni: bing.com
+      type: hysteria
+      up: "11"
+    - alpn:
+        - h3
+      auth-str: dongtaiwang.com
+      down: "20"
+      name: 美国_6
+      port: 20022
+      protocol: udp
+      server: 137.175.82.43
+      skip-cert-verify: true
+      sni: bing.com
+      type: hysteria
+      up: "20"
+    - name: 德国_2
+      password: M2NbFywBXjS9Ova8SgqRrQkp
       port: 443
-      reality-opts:
-        public-key: mXQudYHNu0pebcdk1_qn-UgcmwhjaV7y9UrYu3HX7Rg
-        short-id: 0123456789abcdef
-      server: 43.163.112.174
-      servername: www.cloudflare.com
-      tls: true
-      type: vless
-      uuid: 0dedd47d-47b9-4ed1-9c9f-cbeecad57a68
+      server: 178.17.58.55
+      sni: de-tg.fastlanehosting.ru
+      type: hysteria2
+    - name: 新加坡_1
+      password: d7563108-615c-4338-a7bd-77f359869a4a
+      port: 20051
+      server: sclass-b1.catcat321.com
+      sni: hk.catxstar.com
+      type: trojan
+    - name: 新加坡_2
+      password: d9064589-74af-432a-9390-5d8a9da281bf
+      port: 20051
+      server: sclass-c2.catcat321.com
+      sni: hk.catxstar.com
+      type: trojan
     - client-fingerprint: firefox
-      name: 美国_15
+      name: 美国_7
       network: xhttp
       port: 443
       reality-opts:
@@ -478,100 +230,17 @@ proxies:
         headers:
             Host: 9303d6x.fi-p1b.h1clayd.click
         path: /f57a81c99fea
-    - alpn:
-        - h3
-      auth-str: dongtaiwang.com
-      down: 55 Mbps
-      name: 法国_1
-      port: 24667
-      protocol: udp
-      server: 62.210.28.175
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: 11 Mbps
-    - alpn:
-        - h3
-      auth-str: github.com/Alvin9999-newpac/fanqiang
-      down: "55"
-      name: 美国_16
-      port: 22335
-      protocol: udp
-      server: 198.200.57.142
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: "11"
-    - client-fingerprint: chrome
-      name: 塞舌尔_1
-      network: xhttp
-      port: 443
-      server: 194.156.26.244
-      servername: mamafrance.baklajann.ru
-      tls: true
-      type: vless
-      uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
-      xhttp-opts:
-        headers:
-            Host: mamafrance.baklajann.ru
-        path: /
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: 德国_2
-      port: 443
-      reality-opts:
-        public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-        short-id: 6976d670818644cc
-      server: 4935e4t.de25.h1clayd.click
-      servername: 4935e4t.de25.h1clayd.click
-      tls: true
-      type: vless
-      uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
     - cipher: aes-256-gcm
-      name: 意大利_29
+      name: 意大利_15
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
-      server: 202.50.253.63
+      server: 202.50.253.54
       type: ss
-    - alpn:
-        - h3
-      auth-str: github.com/Alvin9999-newpac/fanqiang
-      down: "55"
-      name: 美国_17
-      port: 22335
-      protocol: udp
-      server: 198.200.57.142
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: "11"
-    - name: 台湾_3
-      password: 0324fbc29561
-      port: 443
-      server: sdf65h46wr.df6h451rh.xin
-      servername: images.ctfassets.net
-      skip-cert-verify: true
-      tls: true
-      type: anytls
-    - client-fingerprint: firefox
-      name: 塞舌尔_2
-      network: xhttp
-      port: 443
-      reality-opts:
-        public-key: jIRVNEf9SpuWP2nJrAbHGGIUnfzOmwZZlrNGw-Y-O2Q
-        short-id: 2d2598d60447a967
-      server: 196.245.52.183
-      servername: e60833x.nl7.h1clayd.click
-      tls: true
-      type: vless
-      uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-      xhttp-opts:
-        path: /d20896a4ce30
     - alpn:
         - h3
       auth-str: dongtaiwang.com
       down: "20"
-      name: 美国_18
+      name: 美国_8
       port: 20022
       protocol: udp
       server: 137.175.82.43
@@ -582,32 +251,8 @@ proxies:
     - alpn:
         - h3
       auth-str: dongtaiwang.com
-      down: 55 Mbps
-      name: 法国_2
-      port: 24667
-      protocol: udp
-      server: 62.210.70.191
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: 11 Mbps
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: 美国_19
-      port: 443
-      reality-opts:
-        public-key: 3Ya7Erk_G6wlvuy6ekUzCW7zxnaDivdUzkkJXTFXcWs
-        short-id: 96f94f6200195aae
-      server: 196.196.208.22
-      servername: 8a0f3at.fi-p1b.h1clayd.click
-      tls: true
-      type: vless
-      uuid: cae99415-10a6-4317-81bd-19a4586b5d76
-    - alpn:
-        - h3
-      auth-str: dongtaiwang.com
       down: "55"
-      name: 美国_20
+      name: 美国_9
       port: 20022
       protocol: udp
       server: 137.175.82.41
@@ -615,47 +260,20 @@ proxies:
       sni: bing.com
       type: hysteria
       up: "11"
-    - name: 日本_2
+    - name: 美国_10
+      obfs: salamander
+      obfs-password: 6fltjteoyab7fjf1
       password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-      port: 34745
-      server: win2loxfde0303.gggrelay.org
+      port: 40055
+      server: 64.118.154.18
       skip-cert-verify: true
-      sni: nu3rb.supertoolify.com
-      type: trojan
-    - name: 香港_1
-      password: 1ab804ed-fea9-4374-8d11-e6866495d8d0
-      port: 443
-      server: theme.lovehk.xyz
-      servername: theme.lovehk.xyz
-      skip-cert-verify: true
-      tls: true
-      type: anytls
-    - name: 香港_2
-      password: 2902c46c8493
-      port: 443
-      server: ibsdsf.df6h451rh.xin
-      servername: docs.microsoft.com
-      skip-cert-verify: true
-      tls: true
-      type: anytls
-    - client-fingerprint: chrome
-      name: 塞舌尔_3
-      network: xhttp
-      port: 443
-      server: 194.156.26.28
-      servername: mama544.baklajann.ru
-      tls: true
-      type: vless
-      uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
-      xhttp-opts:
-        headers:
-            Host: mama544.baklajann.ru
-        path: /
+      sni: psstatic.cdn.bcebos.com
+      type: hysteria2
     - alpn:
         - h3
       auth-str: dongtaiwang.com
       down: "55"
-      name: 美国_21
+      name: 美国_11
       port: 11008
       protocol: udp
       server: 38.6.222.131
@@ -665,110 +283,63 @@ proxies:
       up: "11"
     - alpn:
         - h3
-      auth-str: dongtaiwang.com
-      down: "50"
-      name: 法国_3
-      port: 24667
-      protocol: udp
-      server: 62.210.70.191
-      skip-cert-verify: true
-      type: hysteria
-      up: "10"
-    - client-fingerprint: firefox
-      name: 德国_3
-      port: 443
-      reality-opts:
-        public-key: PslSaSQWP4BZZmkL7irab4FMti8sW6BvoC7ytFjJFyc
-        short-id: cc678f10161992a9
-      server: 13.141.36.15
-      servername: a80b5386.fi2.h1clayd.click
-      tls: true
-      type: vless
-      uuid: 2ccb06b6-9eac-44eb-ade7-c1e5afb8e7df
-    - name: 台湾_4
-      password: 0324fbc29561
-      port: 443
-      server: sdf65h46wr.df6h451rh.xin
-      servername: images.ctfassets.net
-      skip-cert-verify: true
-      tls: true
-      type: anytls
-    - alpn:
-        - h3
-      auth-str: dongtaiwang.com
+      auth-str: github.com/Alvin9999-newpac/fanqiang
       down: "55"
-      name: 美国_22
-      port: 11008
+      name: 美国_12
+      port: 22335
       protocol: udp
-      server: 38.6.222.132
+      server: 198.200.57.142
       skip-cert-verify: true
       sni: bing.com
       type: hysteria
       up: "11"
-    - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: 荷兰_1
-      port: 443
-      reality-opts:
-        public-key: GqhAFTkRQ1HkNXyF2dUl3wUzJDHfgx3O9qocK01SLWU
-        short-id: 38e0c84b27d01e0d
-      server: n1.sklserv.com
-      servername: n1.sklserv.com
-      tls: true
-      type: vless
-      uuid: b7791707-83d9-444b-9d05-f5c99e90acd4
     - alpn:
-        - h2
-      client-fingerprint: chrome
-      name: 塞舌尔_4
-      network: xhttp
-      port: 443
-      server: api.ferrin.uk
-      servername: 7d1a74fd.ferrin.uk
-      tls: true
-      type: vless
-      uuid: 7d1a74fd-8a38-4a29-863f-5da53a9e557e
-      xhttp-opts:
-        path: /es
-    - name: 香港_3
-      password: 2902c46c8493
-      port: 443
-      server: ibsdsf.df6h451rh.xin
-      servername: docs.microsoft.com
+        - h3
+      auth-str: dongtaiwang.com
+      down: "20"
+      name: 美国_13
+      port: 20022
+      protocol: udp
+      server: 137.175.82.43
       skip-cert-verify: true
-      tls: true
-      type: anytls
-    - client-fingerprint: chrome
-      name: 塞舌尔_5
-      network: xhttp
+      sni: bing.com
+      type: hysteria
+      up: "20"
+    - alpn:
+        - http/1.1
+      client-fingerprint: unsafe
+      name: US_14
+      network: ws
       port: 443
-      server: 194.156.26.244
-      servername: mama120.baklajann.ru
+      server: 188.114.98.0
+      servername: o685y.save-node.com
       tls: true
       type: vless
-      uuid: 2b7a122f-f6ff-4860-a919-7bf51be03c02
-      xhttp-opts:
+      uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+      ws-opts:
         headers:
-            Host: mama120.baklajann.ru
-        path: /
+            Host: o685y.save-node.com
+        path: /api/se1k2rfxlsuer3ry4u6e84kl8rqp721p
     - cipher: aes-256-gcm
-      name: 意大利_30
+      name: 意大利_16
       password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
       port: 19999
       server: 202.50.253.81
       type: ss
     - client-fingerprint: firefox
-      flow: xtls-rprx-vision
-      name: 波兰_1
+      grpc-opts:
+        grpc-service-name: 204adda7e3da
+      name: 德国_3
+      network: grpc
       port: 443
       reality-opts:
-        public-key: 0KDql59THS-DXg30wMR0QGgFB6rXARDhr8WoWyfVA2M
-        short-id: 6f0091ebe3029ebb
-      server: 80.47.7.216
-      servername: fedtuna.ai
+        public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
+        short-id: d3bd772514c87d28
+      server: 717252g.nl8.h1clayd.click
+      servername: 717252g.nl8.h1clayd.click
       tls: true
       type: vless
-      uuid: e0643422-1e6e-4182-993e-de9b4c78e736
+      uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
     - client-fingerprint: firefox
       name: 瑞士_1
       network: xhttp
@@ -785,316 +356,133 @@ proxies:
         headers:
             Host: br.jetstoreapp.ru
         path: /b84b87f75dfc
-    - alpn:
-        - h3
-      auth-str: dongtaiwang.com
-      down: "20"
-      name: 美国_23
-      port: 20022
-      protocol: udp
-      server: 137.175.82.43
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: "20"
-    - alpn:
-        - h3
-      auth-str: dongtaiwang.com
-      down: "55"
-      name: 美国_24
-      port: 20022
-      protocol: udp
-      server: 137.175.82.41
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: "11"
-    - name: 台湾_5
-      password: 0324fbc29561
+    - name: 台湾_1
+      password: 2902c46c8493
       port: 443
-      server: mfjh645drfj1dr6j5.df6h451rh.xin
+      server: rtifgjdr.df6h451rh.xin
+      servername: docs.microsoft.com
+      skip-cert-verify: true
+      tls: true
+      type: anytls
+    - client-fingerprint: firefox
+      flow: xtls-rprx-vision
+      name: 美国_15
+      port: 443
+      reality-opts:
+        public-key: 3Ya7Erk_G6wlvuy6ekUzCW7zxnaDivdUzkkJXTFXcWs
+        short-id: 96f94f6200195aae
+      server: 196.196.208.22
+      servername: 8a0f3at.fi-p1b.h1clayd.click
+      tls: true
+      type: vless
+      uuid: cae99415-10a6-4317-81bd-19a4586b5d76
+    - cipher: aes-256-gcm
+      name: 意大利_17
+      password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+      port: 19999
+      server: 202.50.253.45
+      type: ss
+    - name: 台湾_2
+      password: 2902c46c8493
+      port: 443
+      server: er8u54dh.df6h451rh.xin
       servername: px.ads.linkedin.com
       skip-cert-verify: true
       tls: true
       type: anytls
-    - client-fingerprint: chrome
-      flow: xtls-rprx-vision
-      name: 德国_4
-      port: 443
-      reality-opts:
-        public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-        short-id: 6976d670818644cc
-      server: 4935e4t.de25.h1clayd.click
-      servername: 4935e4t.de25.h1clayd.click
-      skip-cert-verify: true
-      tls: true
-      type: vless
-      uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-    - client-fingerprint: chrome
-      name: 塞舌尔_6
-      network: xhttp
-      port: 443
-      reality-opts:
-        public-key: dtO7khFLUkpFDQOtNzo4Th4hJKLoPSY2VtD_9k4Hgiw
-        short-id: 7b2b1a14a6e0630d
-      server: 196.196.148.63
-      servername: fc82dfx.nl8.h1clayd.click
-      tls: true
-      type: vless
-      uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-      xhttp-opts:
-        path: /0616f2d729aa
-    - alpn:
-        - h3
-      auth-str: dongtaiwang.com
-      down: "55"
-      name: 美国_25
-      port: 11008
-      protocol: udp
-      server: 38.6.222.131
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: "11"
-    - alpn:
-        - h3
-      auth-str: dongtaiwang.com
-      down: "55"
-      name: 美国_26
-      port: 20022
-      protocol: udp
-      server: 137.175.82.41
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: "11"
-    - alpn:
-        - h3
-      auth-str: dongtaiwang.com
-      down: "55"
-      name: 美国_27
-      port: 11008
-      protocol: udp
-      server: 38.6.222.132
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: "11"
-    - name: 德国_5
-      password: M2NbFywBXjS9Ova8SgqRrQkp
-      port: 443
-      server: de-tg.fastlanehosting.ru
-      sni: de-tg.fastlanehosting.ru
-      type: hysteria2
-    - alpn:
-        - h3
-      auth-str: dongtaiwang.com
-      down: "20"
-      name: 美国_28
-      port: 20022
-      protocol: udp
-      server: 137.175.82.43
-      skip-cert-verify: true
-      sni: bing.com
-      type: hysteria
-      up: "20"
-    - name: 德国_6
-      password: M2NbFywBXjS9Ova8SgqRrQkp
-      port: 443
-      server: 178.17.58.55
-      sni: de-tg.fastlanehosting.ru
-      type: hysteria2
 proxy-groups:
     - interval: 300
       lazy: true
       name: AUTO
       proxies:
-        - 意大利_20
-        - US_10
-        - 意大利_16
-        - 意大利_23
-        - 意大利_25
-        - 意大利_24
-        - 意大利_22
-        - 意大利_17
-        - 意大利_21
-        - 新加坡_1
-        - 意大利_19
-        - 塞舌尔_6
-        - US_11
-        - US_12
-        - US_13
-        - US_9
-        - 台湾_1
         - 台湾_2
-        - 台湾_3
-        - 台湾_4
-        - 台湾_5
-        - 塞舌尔_1
-        - 塞舌尔_2
-        - 塞舌尔_3
-        - 塞舌尔_4
-        - 塞舌尔_5
-        - 德国_1
-        - 德国_2
-        - 德国_3
-        - 德国_4
-        - 德国_5
-        - 德国_6
-        - 意大利_1
-        - 意大利_10
-        - 意大利_11
-        - 意大利_12
-        - 意大利_13
-        - 意大利_14
-        - 意大利_15
-        - 意大利_18
-        - 意大利_2
-        - 意大利_26
-        - 意大利_27
-        - 意大利_28
-        - 意大利_29
-        - 意大利_3
-        - 意大利_30
-        - 意大利_4
-        - 意大利_5
-        - 意大利_6
-        - 意大利_7
-        - 意大利_8
-        - 意大利_9
-        - 新加坡_2
-        - 新加坡_3
-        - 新加坡_4
-        - 日本_1
-        - 日本_2
-        - 法国_1
-        - 法国_2
-        - 法国_3
-        - 波兰_1
-        - 瑞士_1
-        - 美国_1
-        - 美国_14
-        - 美国_15
-        - 美国_16
-        - 美国_17
-        - 美国_18
-        - 美国_19
-        - 美国_2
-        - 美国_20
-        - 美国_21
-        - 美国_22
-        - 美国_23
-        - 美国_24
-        - 美国_25
-        - 美国_26
-        - 美国_27
-        - 美国_28
-        - 美国_3
         - 美国_4
-        - 美国_5
-        - 美国_6
+        - 意大利_5
+        - 瑞士_1
+        - 美国_3
         - 美国_7
+        - 意大利_3
+        - 意大利_12
+        - 意大利_14
+        - 意大利_4
+        - 意大利_13
+        - 意大利_8
+        - 美国_5
+        - 意大利_1
+        - 意大利_16
+        - 意大利_9
+        - 意大利_10
+        - 意大利_7
+        - 意大利_15
+        - 意大利_17
+        - 美国_2
         - 美国_8
-        - 荷兰_1
-        - 香港_1
-        - 香港_2
-        - 香港_3
+        - 意大利_11
+        - 意大利_2
+        - 美国_1
+        - 德国_1
+        - 台湾_1
+        - 美国_15
+        - 意大利_6
+        - 德国_3
+        - 美国_6
+        - 法国_1
+        - 新加坡_2
+        - 新加坡_1
+        - 德国_2
+        - US_14
+        - 美国_10
+        - 美国_11
+        - 美国_12
+        - 美国_13
+        - 美国_9
       tolerance: 100
       type: url-test
       url: http://www.gstatic.com/generate_204
     - name: SELECT
       proxies:
         - AUTO
-        - 意大利_20
-        - US_10
-        - 意大利_16
-        - 意大利_23
-        - 意大利_25
-        - 意大利_24
-        - 意大利_22
-        - 意大利_17
-        - 意大利_21
-        - 新加坡_1
-        - 意大利_19
-        - 塞舌尔_6
-        - US_11
-        - US_12
-        - US_13
-        - US_9
-        - 台湾_1
         - 台湾_2
-        - 台湾_3
-        - 台湾_4
-        - 台湾_5
-        - 塞舌尔_1
-        - 塞舌尔_2
-        - 塞舌尔_3
-        - 塞舌尔_4
-        - 塞舌尔_5
-        - 德国_1
-        - 德国_2
-        - 德国_3
-        - 德国_4
-        - 德国_5
-        - 德国_6
-        - 意大利_1
-        - 意大利_10
-        - 意大利_11
-        - 意大利_12
-        - 意大利_13
-        - 意大利_14
-        - 意大利_15
-        - 意大利_18
-        - 意大利_2
-        - 意大利_26
-        - 意大利_27
-        - 意大利_28
-        - 意大利_29
-        - 意大利_3
-        - 意大利_30
-        - 意大利_4
-        - 意大利_5
-        - 意大利_6
-        - 意大利_7
-        - 意大利_8
-        - 意大利_9
-        - 新加坡_2
-        - 新加坡_3
-        - 新加坡_4
-        - 日本_1
-        - 日本_2
-        - 法国_1
-        - 法国_2
-        - 法国_3
-        - 波兰_1
-        - 瑞士_1
-        - 美国_1
-        - 美国_14
-        - 美国_15
-        - 美国_16
-        - 美国_17
-        - 美国_18
-        - 美国_19
-        - 美国_2
-        - 美国_20
-        - 美国_21
-        - 美国_22
-        - 美国_23
-        - 美国_24
-        - 美国_25
-        - 美国_26
-        - 美国_27
-        - 美国_28
-        - 美国_3
         - 美国_4
-        - 美国_5
-        - 美国_6
+        - 意大利_5
+        - 瑞士_1
+        - 美国_3
         - 美国_7
+        - 意大利_3
+        - 意大利_12
+        - 意大利_14
+        - 意大利_4
+        - 意大利_13
+        - 意大利_8
+        - 美国_5
+        - 意大利_1
+        - 意大利_16
+        - 意大利_9
+        - 意大利_10
+        - 意大利_7
+        - 意大利_15
+        - 意大利_17
+        - 美国_2
         - 美国_8
-        - 荷兰_1
-        - 香港_1
-        - 香港_2
-        - 香港_3
+        - 意大利_11
+        - 意大利_2
+        - 美国_1
+        - 德国_1
+        - 台湾_1
+        - 美国_15
+        - 意大利_6
+        - 德国_3
+        - 美国_6
+        - 法国_1
+        - 新加坡_2
+        - 新加坡_1
+        - 德国_2
+        - US_14
+        - 美国_10
+        - 美国_11
+        - 美国_12
+        - 美国_13
+        - 美国_9
         - DIRECT
       type: select
 rules:
