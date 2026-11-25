@@ -1,8 +1,8 @@
 
 let customCharStart = "OK组";
-if ($server.type && $server.type.toLowerCase() === "trojan") {
-    return false;
-}
+//if ($server.type && $server.type.toLowerCase() === "trojan") {
+//    return false;
+//}
 //区域映射
 const keywordsToNames = {
     "香港|HK|Hong Kong|HKSAR|澳门|澳門|MO|Macao|Macau|台湾|台北|高雄|湾湾|TW|Taiwan|Taipei|Kaohsiung|港澳|港": { area: "🇭🇰港澳台", flag: "🚀" },
