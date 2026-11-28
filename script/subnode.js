@@ -5,8 +5,8 @@ let customCharStart = "OK组";
 //}
 //区域映射
 const keywordsToNames = {
-    "香港|HK|Hong Kong|HKSAR|澳门|澳門|MO|Macao|Macau|台湾|台北|高雄|湾湾|TW|Taiwan|Taipei|Kaohsiung|港澳|港": { area: "🇭🇰港澳台", flag: "🚀" },
-    "中国大陆|大陆|China|CN": { area: "🇨🇳中国大陆", flag: "💎" },
+    "香港|HK|Hong Kong|HKSAR|澳门|澳門|MO|Macao|Macau|台湾|台北|高雄|湾湾|TW|Taiwan|Taipei|Kaohsiung|港澳|港": { area: "🇭🇰港澳", flag: "🚀" },
+    "台湾|台北|高雄|湾湾|TW|Taiwan|Taipei": { area: "tw台湾", flag: "🚀" },
     "新加坡|狮城|SG|Singapore|SIN|LionCity": { area: "🇸🇬新加坡", flag: "🚀" },
     "日|日本|东京|大阪|名古屋|JP|NRT|KIX|Tokyo|Japan|Osaka|Nagoya": { area: "🇯🇵日本", flag: "🚀" },
     "韩国|首尔|釜山|KR|Korea|South Korea|Seoul|Busan|SEL|ICN": { area: "🇰🇷韩国", flag: "🚀" },
